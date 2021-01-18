@@ -1,0 +1,572 @@
+﻿Species,Guild,Mitigation.status,Time.since.Stewart.Creek.installation,Time.since.Stewart.Creek.installation cent,Time.since.Wind.Valley.Deadmans.installation,Time.since.Wind.Valley.Deadmans.installation cent,Collision.count.x,Case.year,Occurrence.date,Month,Occurrence.hour,Kilometre.post,Total.injuries,Total.fatalities,Mitigationstatus,Year,Damage threshold,Collisioncount,TimeSC,TimeWVDM,Collision.count per year,Collision rate per year,Collision rate divided by mitigation years,Collision ID
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,14/07/1991,7,9.3,18.45,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,1
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,23/11/1991,11,19.3,25.93,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,2
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,13/11/1991,11,6.5,9.45,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,3
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,16/11/1991,11,20.05,16.6,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,4
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,27/12/1991,12,15.5,23.1,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,5
+Elk,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,18/06/1991,6,3.3,13.5,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,6
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,24/06/1991,6,19.2,24.02,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,7
+Elk,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,08/11/1991,11,17.4,30.54,1,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,8
+Elk,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,29/03/1991,3,10.58,18.62,2,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,9
+Elk,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,29/07/1991,7,23.3,14.43,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,10
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,12/05/1991,5,0.2,22.02,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,11
+Elk,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,23/04/1991,4,21.4,28.02,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,12
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,13/10/1991,10,21,15.64,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,13
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,01/06/1991,6,5.4,28.6,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,14
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,12/06/1991,6,17.5,17.6,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,15
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,21/05/1991,5,5.45,20.3,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,16
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,19/06/1991,6,7.3,17.6,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,17
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,02/08/1991,8,8.3,15.1,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,18
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,2,1991,25/07/1991,7,14.1,21.68,0,0,No structures built,1991,1000,2,-7,-11,25,0.068493151,29.375,19
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,22/02/1991,2,16,28.75,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,20
+Unknown,Unknown,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,20/05/1991,5,3.45,17.6,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,21
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,24/07/1991,7,2.3,14.44,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,22
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,15/07/1991,7,21.3,18.92,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,23
+Deer,Ungulate,No structures built,-7,-0.782895896,-11,-0.782908017,1,1991,23/06/1991,6,4.3,30.71,0,0,No structures built,1991,1000,1,-7,-11,25,0.068493151,29.375,24
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,14/11/1992,11,17.3,31.12,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,25
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,11/07/1992,7,23.3,13.61,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,26
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,20/04/1992,4,1.3,18.75,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,27
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,13/11/1992,11,7,28.76,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,28
+Elk,Ungulate,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,12/09/1992,9,21,31.22,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,29
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,01/11/1992,11,6,19.61,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,30
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,04/04/1992,4,21.3,23.75,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,31
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,09/08/1992,8,5.3,23.75,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,32
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,08/08/1992,8,11,16.61,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,33
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,30/08/1992,8,22.3,30.711,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,34
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,30/08/1992,8,21.15,19.03,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,35
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,10/12/1992,12,2.5,29.61,1,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,36
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,10/07/1992,7,22,19.74,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,37
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,01/11/1992,11,18.15,12.76,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,38
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,19/07/1992,7,22.16,12.6,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,39
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,09/11/1992,11,18,12.76,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,40
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,13/08/1992,8,22.1,14.55,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,41
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,15/08/1992,8,1.35,11.58,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,42
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,24/03/1992,3,22.3,16.1,1,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,43
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,01/11/1992,11,6,18.61,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,44
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,14/04/1992,4,6.1,30.05,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,45
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,11/10/1992,10,23.45,12.32,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,46
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,17/02/1992,2,22.3,23.75,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,47
+Unknown,Unknown,No structures built,-6,-0.694821208,-10,-0.694838604,1,1992,06/11/1992,11,6.3,12.9,0,0,No structures built,1992,1000,1,-6,-10,24,0.065753425,29.375,48
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,16/11/1993,11,19.2,13.26,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,49
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,25/06/1993,6,5,28.05,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,50
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,17/01/1993,1,3,15.11,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,51
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,17/04/1993,4,23.45,23.76,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,52
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,20/09/1993,9,21,21,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,53
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,10/11/1993,11,23.5,16.609,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,54
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,15/04/1993,4,6,16.06,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,55
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,11/12/1993,12,18.3,9.6,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,56
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,12/09/1993,9,23.3,19.76,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,57
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,25/10/1993,10,7.3,28.18,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,58
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,27/07/1993,7,22.3,16.89,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,59
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,02/08/1993,8,15.45,28.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,60
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,14/09/1993,9,6.45,28.1,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,61
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,16/01/1993,1,5.3,10.64,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,62
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,04/09/1993,9,23.15,13.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,63
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,01/07/1993,7,12,12.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,64
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,01/04/1993,4,0.45,25.76,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,65
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,11/04/1993,4,5.3,20.28,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,66
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,15/04/1993,4,5.35,15.3,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,67
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,04/07/1993,7,14.15,16.89,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,68
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,05/11/1993,11,21.4,11.98,3,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,69
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,25/07/1993,7,15.1,19.4,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,70
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,08/12/1993,12,21.3,30.55,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,71
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,04/01/1993,1,24,31.02,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,72
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,14/06/1993,6,13.1,23.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,73
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,19/08/1993,8,2,15.81,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,74
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,28/09/1993,9,21,18.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,75
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,14/06/1993,6,20.3,26.05,1,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,76
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,26/05/1993,5,22,16.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,77
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,11/10/1993,10,0.3,30.58,2,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,78
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,08/08/1993,8,23.2,17.61,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,79
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,12/05/1993,5,23,16.5,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,80
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,31/10/1993,10,11.3,29.07,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,81
+Unknown,Unknown,No structures built,-5,-0.606746521,-9,-0.606769191,1,1993,07/10/1993,10,6.3,9.685,0,0,No structures built,1993,1000,1,-5,-9,34,0.093150685,29.375,82
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,01/04/1994,4,1,15.32,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,83
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,25/05/1994,5,3.3,19.63,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,84
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,22/07/1994,7,1,19.7,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,85
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,30/08/1994,8,21.15,23.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,86
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,18/06/1994,6,4.5,21,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,87
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,09/07/1994,7,0.15,23.549,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,88
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,06/07/1994,7,22.3,16.599,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,89
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,26/01/1994,1,19,23.5,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,90
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,24/07/1994,7,21.3,15.1,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,91
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,18/08/1994,8,8,25.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,92
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,17/07/1994,7,10,30.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,93
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,23/09/1994,9,2,13.56,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,94
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,25/09/1994,9,23,13.43,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,95
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,06/04/1994,4,20.4,14.55,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,96
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,16/07/1994,7,3.3,14.5,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,97
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,25/08/1994,8,1,16.61,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,98
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,03/06/1994,6,3,17.63,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,99
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,15/05/1994,5,2,13.7,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,100
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,02/04/1994,4,24,29.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,101
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,06/07/1994,7,20.3,30.711,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,102
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,05/07/1994,7,17.15,13.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,103
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,05/11/1994,11,19,29.56,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,104
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,11/06/1994,6,6.3,13.7,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,105
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,27/03/1994,3,8,23.5,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,106
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,13/11/1994,11,22.3,19.5,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,107
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,07/11/1994,11,21.3,30.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,108
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,09/12/1994,12,22,13.56,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,109
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,29/07/1994,7,23.5,29.3,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,110
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,08/09/1994,9,21.45,16.539,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,111
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,27/08/1994,8,22,13.46,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,112
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,25/11/1994,11,20.3,10.76,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,113
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,08/11/1994,11,6.3,30.46,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,114
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,19/11/1994,11,21.15,13.46,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,115
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,21/08/1994,8,16.3,19.85,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,116
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,19/10/1994,10,0.15,27.47,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,117
+Unknown,Unknown,No structures built,-4,-0.518671834,-8,-0.518699778,1,1994,02/01/1994,1,23.5,16.119,0,0,No structures built,1994,1000,1,-4,-8,36,0.098630137,29.375,118
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,12/01/1995,1,8,30.58,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,119
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,29/04/1995,4,17,13.5,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,120
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,26/10/1995,10,7,21.56,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,121
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,23/10/1995,10,19.3,11.76,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,122
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,13/10/1995,10,17.3,14.55,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,123
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,01/12/1995,12,19.45,16.4,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,124
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,09/06/1995,6,22.3,15.11,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,125
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,17/04/1995,4,2,13.5,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,126
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,13/04/1995,4,0.45,19.8,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,127
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,13/06/1995,6,6,31,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,128
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,23/06/1995,6,22,23.18,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,129
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,09/06/1995,6,3,18.96,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,130
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,15/07/1995,7,23.45,16.61,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,131
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,24/05/1995,5,10,31.44,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,132
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,16/06/1995,6,5.3,28.376,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,133
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,03/10/1995,10,4.2,17.61,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,134
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,27/04/1995,4,,30.5,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,135
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,01/10/1995,10,2.45,23.05,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,136
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,19/07/1995,7,22.2,20.999,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,137
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,06/04/1995,4,1,24.43,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,138
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,09/09/1995,9,0.45,27.53,2,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,139
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,08/04/1995,4,21,31.658,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,140
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,13/07/1995,7,22.45,16.61,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,141
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,14/06/1995,6,5,23.76,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,142
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,06/07/1995,7,2,21.95,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,143
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,24/05/1995,5,4.4,15.553,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,144
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,19/09/1995,9,,22.03,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,145
+Unknown,Unknown,No structures built,-3,-0.430597146,-7,-0.430630366,1,1995,21/06/1995,6,9.3,30,0,0,No structures built,1995,1000,1,-3,-7,28,0.076712329,29.375,146
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,07/03/1996,3,22.15,28.57,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,147
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,06/03/1996,3,20,22.76,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,148
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,25/07/1996,7,4.36,15.76,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,149
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,24/09/1996,9,0.01,23.76,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,150
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,13/11/1996,11,7,28.96,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,151
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,26/02/1996,2,22,30,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,152
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,27/06/1996,6,6.55,16.043,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,153
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,09/10/1996,10,9.3,16.07,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,154
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,22/11/1996,11,7,9.45,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,155
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,10/08/1996,8,5,32,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,156
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,20/08/1996,8,8,23.77,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,157
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,1996/09/99,9,15.5,13.55,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,158
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,07/03/1996,3,19.45,16.82,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,159
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,28/06/1996,6,8.3,19.3,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,160
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,01/07/1996,7,23.45,16.63,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,161
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,08/07/1996,7,2.45,21.61,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,162
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,08/10/1996,10,20.45,27.63,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,163
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,11/05/1996,5,13.2,18.56,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,164
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,24/06/1996,6,21.45,10.07,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,165
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,19/01/1996,1,20.3,11.57,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,166
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,20/09/1996,9,22.3,16.61,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,167
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,06/06/1996,6,21.3,11.56,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,168
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,13/07/1996,7,18,15.28,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,169
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,20/07/1996,7,22.2,16.61,1,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,170
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,26/10/1996,10,20,15.91,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,171
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,19/01/1996,1,19.3,16.6,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,172
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,14/06/1996,6,22.3,28.5,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,173
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,08/12/1996,12,23,31.11,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,174
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,15/06/1996,6,13.3,23.76,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,175
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1996,30/09/1996,9,19.45,21.3,0,0,No structures built,1996,1000,1,-2,-6,30,0.082191781,29.375,176
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,11/04/1997,4,5.3,29.6,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,177
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,31/07/1997,7,5.15,31.31,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,178
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,13/10/1997,10,6,22.8,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,179
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,20/06/1997,6,5.4,13.56,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,180
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,29/09/1997,9,6,10.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,181
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,22/01/1997,1,5.3,24.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,182
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,19/03/1997,3,23.4,14.61,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,183
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,17/06/1997,6,22.5,15.56,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,184
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,20/05/1997,5,22.3,16.61,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,185
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,26/05/1997,5,12.5,21.8,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,186
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,26/06/1997,6,5.3,13.56,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,187
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,19/07/1997,7,10.3,23.76,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,188
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,21/11/1997,11,18.2,21.28,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,189
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,10/10/1997,10,23,9.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,190
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,09/11/1997,11,23.36,29.6,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,191
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,23/06/1997,6,21.3,24.3,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,192
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,07/04/1997,4,21.3,14.61,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,193
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,17/08/1997,8,22.16,14.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,194
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,07/12/1997,12,19,14.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,195
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,31/08/1997,8,21.45,10.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,196
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,04/12/1997,12,12.3,18.51,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,197
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,26/07/1997,7,3,18.61,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,198
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,24/05/1997,5,22.3,16.78,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,199
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,13/08/1997,8,23.05,20.39,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,200
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,25/07/1997,7,19.3,19.77,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,201
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,2,1997,01/08/1997,8,13,31.6,0,0,No structures built,1997,1000,2,-2,-6,33,0.090410959,29.375,202
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,07/06/1997,6,7,24.25,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,203
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,08/11/1997,11,23,9.73,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,204
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,29/08/1997,8,21.15,18.58,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,205
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,27/04/1997,4,17.5,19.25,1,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,206
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,06/06/1997,6,22,18,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,207
+Unknown,Unknown,No structures built,-2,-0.342522459,-6,-0.342560953,1,1997,03/05/1997,5,21.02,31.998,0,0,No structures built,1997,1000,1,-2,-6,33,0.090410959,29.375,208
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,07/03/1998,3,1,18.7,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,209
+Moose,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,27/09/1998,9,21.35,18.61,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,210
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,05/03/1998,3,23,23.55,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,211
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,08/02/1998,2,19.5,10.4,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,212
+Elk,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,04/08/1998,8,23.25,17.65,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,213
+Deer,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,12/08/1998,8,22.3,19.04,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,214
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,05/04/1998,4,22.2,21.2,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,215
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,17/04/1998,4,21.15,19.8,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,216
+Elk,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,07/12/1998,12,4.4,14.2,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,217
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,13/12/1998,12,17.45,21.3,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,218
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,14/11/1998,11,23.45,22.3,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,219
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,30/10/1998,10,21.1,31.059,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,220
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,20/06/1998,6,15,15.28,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,221
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,09/08/1998,8,23,21.04,1,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,222
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,11/11/1998,11,3.3,29.61,3,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,223
+Deer,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,06/07/1998,7,22.12,25,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,224
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,07/11/1998,11,18.3,22.01,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,225
+Deer,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,26/07/1998,7,7.3,20.8,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,226
+Elk,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,09/08/1998,8,23,14.8,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,227
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,07/09/1998,9,23,19.6,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,228
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,30/08/1998,8,21.3,20.8,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,229
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,24/03/1998,3,2,25.72,0,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,230
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,17/09/1998,9,6.2,9.3,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,231
+Unknown,Unknown,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,29/11/1998,11,18.1,23.76,0,,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,232
+Moose,Ungulate,No structures built,-1,-0.254447772,-5,-0.25449154,1,1998,30/09/1998,9,8.29,9.28,1,0,No structures built,1998,1000,1,-1,-5,25,0.068493151,29.375,233
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,19/10/1999,10,1.15,9.429,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,234
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,29/06/1999,6,16.3,16.4,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,235
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,23/10/1999,10,5.45,28.4,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,236
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,28/06/1999,6,10,30.75,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,237
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,23/06/1999,6,17,26.47,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,238
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,23/02/1999,2,20,16.3,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,239
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,25/02/1999,2,17,15,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,240
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,03/05/1999,5,1,16.29,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,241
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,26/11/1999,11,11.59,21,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,242
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,13/12/1999,12,9,29.4,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,243
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,24/11/1999,11,19,30.76,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,244
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,11/07/1999,7,16.5,31.5,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,245
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,19/08/1999,8,7.1,22.6,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,246
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,07/08/1999,8,10,24.65,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,247
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,13/12/1999,12,17.2,28,1,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,248
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,29/11/1999,11,18.3,15.76,1,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,249
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,29/07/1999,7,2,12,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,250
+Unknown,Unknown,SC built,0,-0.166373084,-4,-0.166422127,1,1999,23/07/1999,7,5,9,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,251
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,03/08/1999,8,19.3,18,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,252
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,01/09/1999,9,19.15,18.585,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,253
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,24/06/1999,6,4.3,22,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,254
+Elk,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,12/02/1999,2,6.3,9,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,255
+Deer,Ungulate,SC built,0,-0.166373084,-4,-0.166422127,1,1999,19/06/1999,6,1,25,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,256
+Unknown,Unknown,SC built,0,-0.166373084,-4,-0.166422127,1,1999,29/10/1999,10,18.3,9.249,0,0,SC built,1999,1000,1,0,-4,24,0.065753425,29.8,257
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,19/01/2000,1,0.05,13.11,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,258
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,24/06/2000,6,23.15,28.03,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,259
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,11/06/2000,6,14,10.95,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,260
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,12/06/2000,6,13,24.28,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,261
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,25/11/2000,11,18.15,29.76,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,262
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,21/07/2000,7,22.15,25.64,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,263
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,28/06/2000,6,7.45,20.95,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,264
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,06/07/2000,7,7.3,13.6,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,265
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,03/11/2000,11,23.4,25.6,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,266
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,12/09/2000,9,6.25,23.75,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,267
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,20/11/2000,11,6.15,12.61,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,268
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,03/07/2000,7,17.3,28.03,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,269
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,09/08/2000,8,0.3,13.6,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,270
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,13/10/2000,10,18.5,19.83,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,271
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,31/10/2000,10,17,29.9,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,272
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,17/11/2000,11,18.3,23.57,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,273
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,07/02/2000,2,2.45,16.25,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,274
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,25/05/2000,5,22.45,9.55,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,275
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,25/11/2000,11,23.55,15.1,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,276
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,09/10/2000,10,23.44,28.44,5,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,277
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,11/04/2000,4,22.05,28.42,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,278
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,20/05/2000,5,1.45,15.34,2,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,279
+Elk,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,18/01/2000,1,23.55,13.11,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,280
+Unknown,Unknown,SC built,1,-0.078298397,-3,-0.078352714,1,2000,05/06/2000,6,22,25.71,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,281
+Unknown,Unknown,SC built,1,-0.078298397,-3,-0.078352714,1,2000,24/03/2000,3,1,23.76,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,282
+Deer,Ungulate,SC built,1,-0.078298397,-3,-0.078352714,1,2000,05/03/2000,3,1,16.06,0,0,SC built,2000,1000,1,1,-3,26,0.071232877,29.8,283
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,02/09/2001,9,4.45,9,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,284
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,26/12/2001,12,0.01,23.451,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,285
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,03/10/2001,10,2.3,16.6,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,286
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,22/08/2001,8,21.3,25.582,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,287
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,17/04/2001,4,5.45,16.788,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,288
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,15/04/2001,4,14.3,22,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,289
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,15/04/2001,4,3,16.788,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,290
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,26/06/2001,6,20.3,23.77,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,291
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,27/06/2001,6,9.5,22,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,292
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,27/06/2001,6,8.2,23.938,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,293
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,24/06/2001,6,17.45,31,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,294
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,10/08/2001,8,7.1,14.223,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,295
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,18/11/2001,11,7.35,31,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,296
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,24/07/2001,7,1,28.791,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,297
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,01/02/2001,2,18.3,25.816,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,298
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,22/05/2001,5,3,17.61,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,299
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,25/06/2001,6,5.15,28.792,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,300
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,01/07/2001,7,22.3,23.76,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,301
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,03/12/2001,12,18,23.944,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,302
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,19/10/2001,10,6,23.76,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,303
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,17/06/2001,6,13,12.25,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,304
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,16/11/2001,11,7.4,21.913,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,305
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,09/03/2001,3,22,16.6,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,306
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,29/09/2001,9,6.2,22,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,307
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,29/10/2001,10,3,16.04,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,308
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,12/09/2001,9,22.16,23.76,2,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,309
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,15/07/2001,7,11.55,27.908,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,310
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,10/07/2001,7,20.1,23.53,2,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,311
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,17/09/2001,9,7.15,31.04,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,312
+Bear,Carnivore,SC built,2,0.00977629,-2,0.009716698,1,2001,19/05/2001,5,23.43,13.56,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,313
+Unknown,Unknown,SC built,2,0.00977629,-2,0.009716698,1,2001,11/08/2001,8,21.3,28.45,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,314
+Moose,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,30/10/2001,10,19.5,16.638,2,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,315
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2001,29/06/2001,6,5,18.03,0,0,SC built,2001,1000,1,2,-2,33,0.090410959,29.8,316
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,23/11/2002,11,16.25,18,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,317
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,03/06/2002,6,7.3,16.566,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,318
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,18/06/2002,6,11.3,16.534,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,319
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,20/06/2002,6,22.45,16.445,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,320
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,30/08/2002,8,6.45,22.19,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,321
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,27/06/2002,6,22,23.702,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,322
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,16/06/2002,6,1.15,23.833,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,323
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,14/10/2002,10,1.05,25.77,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,324
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,12/05/2002,5,0.3,28.083,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,325
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,25/08/2002,8,23.3,13.6,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,326
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,14/06/2002,6,11,26,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,327
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,10/05/2002,5,22,31.66,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,328
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,11/11/2002,11,5.45,23.319,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,329
+Coyote,Carnivore,SC built,2,0.00977629,-2,0.009716698,1,2002,03/09/2002,9,6.2,24.208,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,330
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,15/10/2002,10,4.3,13.6,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,331
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,14/12/2002,12,3.3,15,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,332
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,10/11/2002,11,1.45,26.11,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,333
+Bear,Carnivore,SC built,2,0.00977629,-2,0.009716698,1,2002,16/09/2002,9,12.45,28.066,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,334
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,11/07/2002,7,22.45,20.874,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,335
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,28/06/2002,6,15.3,19.553,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,336
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,02/07/2002,7,4.3,19.55,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,337
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,27/08/2002,8,5.3,28,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,338
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,25/08/2002,8,23,21.941,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,339
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,07/10/2002,10,7.05,23.954,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,340
+Deer,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,22/11/2002,11,10.15,16.482,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,341
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,08/11/2002,11,6.59,16.492,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,342
+Moose,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,21/12/2002,12,0.4,16.041,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,343
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,04/02/2002,2,19.05,17.74,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,344
+Unknown,Unknown,SC built,2,0.00977629,-2,0.009716698,1,2002,20/07/2002,7,14,19.417,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,345
+Elk,Ungulate,SC built,2,0.00977629,-2,0.009716698,1,2002,03/05/2002,5,22.4,16.11,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,346
+Unknown,Unknown,SC built,2,0.00977629,-2,0.009716698,1,2002,26/05/2002,5,0.3,31.05,0,0,SC built,2002,1000,1,2,-2,31,0.084931507,29.8,347
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,14/05/2003,5,6,16.512,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,348
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,17/04/2003,4,8.5,27.994,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,349
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,17/02/2003,2,0.3,23.887,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,350
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,02/05/2003,5,7.15,25.995,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,351
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,10/07/2003,7,11.3,19.532,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,352
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,12/10/2003,10,23,27.922,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,353
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,09/08/2003,8,6,23.551,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,354
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,09/06/2003,6,22.3,17.61,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,355
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,04/07/2003,7,7.36,22.184,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,356
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,24/07/2003,7,22,17.536,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,357
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,13/06/2003,6,4,19.317,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,358
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,31/07/2003,7,2,26.429,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,359
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,14/11/2003,11,18.3,14.183,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,360
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,07/08/2003,8,23.15,14.143,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,361
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,26/07/2003,7,22.3,28.227,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,362
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,01/07/2003,7,5.3,25.585,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,363
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,28/12/2003,12,17.3,13.279,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,364
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,30/12/2003,12,11.15,22.342,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,365
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,23/12/2003,12,17.2,26.228,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,366
+Bear,Carnivore,SC built,3,0.097850978,-1,0.097786111,1,2003,14/09/2003,9,1.3,28.194,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,367
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,02/12/2003,12,19.3,16.568,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,368
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,10/11/2003,11,6.4,29.72,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,369
+Moose,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,14/11/2003,11,5.3,12.246,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,370
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,16/03/2003,3,1.5,28.114,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,371
+Moose,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,24/04/2003,4,10.35,14.954,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,372
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,09/05/2003,5,16,13.291,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,373
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,14/06/2003,6,2.49,10.025,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,374
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,07/11/2003,11,21.35,15.446,1,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,375
+Mountain goat,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,15/12/2003,12,14.25,16.506,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,376
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,04/08/2003,8,2.3,21.969,2,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,377
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,23/07/2003,7,1,30.101,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,378
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,30/06/2003,6,1.3,13.4,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,379
+Deer,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,06/07/2003,7,16.3,17.451,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,380
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,07/11/2003,11,21.34,14.154,1,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,381
+Elk,Ungulate,SC built,3,0.097850978,-1,0.097786111,1,2003,04/12/2003,12,1.1,18.339,0,0,SC built,2003,1000,1,3,-1,35,0.095890411,29.8,382
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,07/03/2004,3,19.25,32.179,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,383
+Elk,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,01/09/2004,9,4,30.746,1,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,384
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,08/11/2004,11,6.15,30.616,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,385
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,18/06/2004,6,21.1,30.124,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,386
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,20/02/2004,2,,25.933,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,387
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,18/06/2004,6,13.15,24.703,1,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,388
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,09/11/2004,11,7.4,23.877,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,389
+Elk,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,29/10/2004,10,5.3,22.158,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,390
+Deer,Ungulate,All structures built,4,0.185925665,0,0.185855524,1,2004,15/11/2004,11,0.4,20.158,0,0,All structures built,2004,1000,1,4,0,9,0.024657534,18.9,391
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,09/11/2005,11,23.27,32.307,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,392
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,04/07/2005,7,6,32.162,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,393
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,17/07/2005,7,23,31.633,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,394
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,03/07/2005,7,22.3,30.839,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,395
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,04/08/2005,8,12.15,30.73,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,396
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,18/04/2005,4,11.3,30.614,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,397
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,11/12/2005,12,6.3,30.571,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,398
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,27/06/2005,6,11.1,30.302,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,399
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,21/04/2005,4,8,29.296,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,400
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,23/02/2005,2,22.05,28.992,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,401
+Unknown,Unknown,All structures built,5,0.274000352,1,0.273924937,1,2005,21/06/2005,6,21.2,28.514,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,402
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,25/07/2005,7,4.15,28.49,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,403
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,02/03/2005,3,8,28.467,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,404
+Coyote,Carnivore,All structures built,5,0.274000352,1,0.273924937,1,2005,18/03/2005,3,13.3,28.45,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,405
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,26/10/2005,10,2.45,28.363,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,406
+Elk,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,21/08/2005,8,23.2,28.312,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,407
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,21/05/2005,5,6.55,25.929,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,408
+Elk,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,10/12/2005,12,21,23.467,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,409
+Deer,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,18/11/2005,11,7,23.305,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,410
+Elk,Ungulate,All structures built,5,0.274000352,1,0.273924937,1,2005,27/12/2005,12,17.1,22.319,0,0,All structures built,2005,1000,1,5,1,20,0.054794521,18.9,411
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,04/12/2006,12,6.3,32.246,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,412
+Coyote,Carnivore,All structures built,6,0.36207504,2,0.361994349,1,2006,26/05/2006,5,5.3,32.003,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,413
+Elk,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,06/11/2006,11,0.01,30.96,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,414
+Elk,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,06/10/2006,10,3,30.766,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,415
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,20/11/2006,11,23.01,30.399,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,416
+Elk,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,14/05/2006,5,12,29.585,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,417
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,19/02/2006,2,13.47,28.711,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,418
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,19/06/2006,6,11.15,28.464,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,419
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,03/06/2006,6,11,27.241,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,420
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,18/11/2006,11,20.3,26.564,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,421
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,06/06/2006,6,12.35,24.916,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,422
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,10/08/2006,8,11,24.485,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,423
+Moose,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,19/11/2006,11,18.3,23.781,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,424
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,27/04/2006,4,5.45,23.78,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,425
+Moose,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,19/11/2006,11,18.2,23.78,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,426
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,17/09/2006,9,4.15,22.432,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,427
+Moose,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,08/08/2006,8,5.3,22.415,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,428
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,10/12/2006,12,8.25,20.588,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,429
+Deer,Ungulate,All structures built,6,0.36207504,2,0.361994349,1,2006,17/08/2006,8,5.3,20.584,0,0,All structures built,2006,1000,1,6,2,19,0.052054795,18.9,430
+Bear,Carnivore,All structures built,7,0.450149727,3,0.450063762,1,2007,03/09/2007,9,0.01,31.138,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,431
+Elk,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,26/10/2007,10,3,30.851,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,432
+Elk,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,28/10/2007,10,7,30.789,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,433
+Elk,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,26/01/2007,1,22.17,30.69,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,434
+Elk,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,31/10/2007,10,1.3,30.629,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,435
+Elk,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,30/04/2007,4,7,30.591,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,436
+Unknown,Unknown,All structures built,7,0.450149727,3,0.450063762,1,2007,19/07/2007,7,19.3,28.5,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,437
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,10/07/2007,7,22,28.484,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,438
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,15/07/2007,7,6,28.458,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,439
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,16/09/2007,9,12,27.957,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,440
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,29/06/2007,6,22.2,27.361,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,441
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,05/11/2007,11,10,25.871,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,442
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,15/08/2007,8,6.08,24.976,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,443
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,15/04/2007,4,14.1,24.915,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,444
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,02/08/2007,8,17.15,24.63,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,445
+Moose,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,08/07/2007,7,0.1,24.324,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,446
+Unknown,Unknown,All structures built,7,0.450149727,3,0.450063762,1,2007,16/05/2007,5,23,24.068,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,447
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,09/06/2007,6,1,23.509,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,448
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,08/11/2007,11,4,22.046,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,449
+Deer,Ungulate,All structures built,7,0.450149727,3,0.450063762,1,2007,26/12/2007,12,22,21.992,0,0,All structures built,2007,1000,1,7,3,20,0.054794521,18.9,450
+Unknown,Unknown,All structures built,8,0.538224414,4,0.538133175,1,2008,30/06/2008,6,17.42,32.004,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,451
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,15/04/2008,4,5.45,30.948,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,452
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,20/02/2008,2,7.3,30.891,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,453
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,12/07/2008,7,8,30.871,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,454
+Elk,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,19/09/2008,9,5,30.684,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,455
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,01/12/2008,12,,29.586,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,456
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,13/04/2008,4,22.3,28.77,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,457
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,17/10/2008,10,18.3,28.408,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,458
+Elk,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,17/04/2008,4,22.1,25.912,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,459
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,22/11/2008,11,18,24.917,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,460
+Elk,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,15/09/2008,9,21.15,23.967,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,461
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,05/08/2008,8,21,23.801,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,462
+Unknown,Unknown,All structures built,8,0.538224414,4,0.538133175,1,2008,30/08/2008,8,15.35,22.783,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,463
+Deer,Ungulate,All structures built,8,0.538224414,4,0.538133175,1,2008,14/06/2008,6,6.45,20.841,0,0,All structures built,2008,1000,1,8,4,14,0.038356164,18.9,464
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,13/10/2009,10,20,32.289,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,465
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,13/05/2009,5,5.1,31.875,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,466
+Elk,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,23/10/2009,10,20.15,30.951,2,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,467
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,05/05/2009,5,6,30.883,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,468
+Elk,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,29/04/2009,4,5.5,30.871,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,469
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,24/04/2009,4,21.3,30.862,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,470
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,25/02/2009,2,20.48,30.857,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,471
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,05/12/2009,12,19.3,30.678,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,472
+Elk,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,23/04/2009,4,21.45,30.591,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,473
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,14/11/2009,11,23.45,30.491,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,474
+Elk,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,11/05/2009,5,0.3,28.976,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,475
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,26/06/2009,6,22,28.5,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,476
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,13/08/2009,8,17.5,27.901,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,477
+Unknown,Unknown,All structures built,9,0.626299102,5,0.626202588,1,2009,05/07/2009,7,20.45,26.004,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,478
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,12/09/2009,9,17,25.913,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,479
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,16/01/2009,1,18.3,25.802,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,480
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,27/11/2009,11,7.3,25.249,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,481
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,27/11/2009,11,16.2,24.214,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,482
+Elk,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,23/09/2009,9,9.3,23.902,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,483
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,30/05/2009,5,21,23.886,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,484
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,15/09/2009,9,22.3,23.081,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,485
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,02/12/2009,12,7.3,22.157,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,486
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,26/11/2009,11,17.15,22.086,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,487
+Deer,Ungulate,All structures built,9,0.626299102,5,0.626202588,1,2009,14/06/2009,6,4.45,20.849,0,0,All structures built,2009,1000,1,9,5,24,0.065753425,18.9,488
+Elk,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,18/12/2010,12,23.15,32.316,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,489
+Elk,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,10/10/2010,10,21.26,32.303,4,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,490
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,30/06/2010,6,7.3,32.254,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,491
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,18/07/2010,7,20,32.224,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,492
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,20/09/2010,9,15.15,32.1,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,493
+Elk,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,16/10/2010,10,23.15,30.812,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,494
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,18/12/2010,12,0.15,29.077,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,495
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,07/06/2010,6,0.3,28.595,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,496
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,28/01/2010,1,21,28.499,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,497
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,30/01/2010,1,10,27.964,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,498
+Elk,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,12/03/2010,3,0.1,26.916,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,499
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,17/08/2010,8,13.3,26.533,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,500
+Elk,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,20/07/2010,7,1.09,24.542,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,501
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,21/06/2010,6,9.45,24.542,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,502
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,23/06/2010,6,21.3,24.036,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,503
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,12/08/2010,8,5.2,24.034,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,504
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,05/08/2010,8,9.15,23.974,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,505
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,29/03/2010,3,0.3,23.89,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,506
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,07/06/2010,6,14.3,23.732,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,507
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,24/05/2010,5,11.15,23.594,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,508
+Deer,Ungulate,All structures built,10,0.714373789,6,0.714272001,1,2010,30/10/2010,10,21.4,20.936,0,0,All structures built,2010,1000,1,10,6,21,0.057534247,18.9,509
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,15/05/2011,5,22,31.308,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,510
+Elk,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,24/04/2011,4,21.4,31.227,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,511
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,28/11/2011,11,19.25,31.047,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,512
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,05/09/2011,9,21.3,30.917,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,513
+Elk,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,15/12/2011,12,21.5,30.373,1,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,514
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,04/08/2011,8,4,28.608,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,515
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,03/07/2011,7,23.3,28.536,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,516
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,29/08/2011,8,12.3,28.462,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,517
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,21/08/2011,8,0.3,28.452,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,518
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,21/08/2011,8,21.4,26.561,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,519
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,25/06/2011,6,22.3,25.67,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,520
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,17/05/2011,5,23.3,24.026,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,521
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,26/06/2011,6,17,24.006,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,522
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,23/06/2011,6,6.04,23.948,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,523
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,21/08/2011,8,1.25,23.917,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,524
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,09/10/2011,10,23,23.907,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,525
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,07/11/2011,11,7,23.891,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,526
+Bear,Carnivore,All structures built,11,0.802448476,7,0.802341413,1,2011,24/08/2011,8,23,23.875,1,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,527
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,11/07/2011,7,3.3,21.943,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,528
+Elk,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,04/08/2011,8,23.48,21.718,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,529
+Deer,Ungulate,All structures built,11,0.802448476,7,0.802341413,1,2011,02/07/2011,7,23.15,21.417,0,0,All structures built,2011,2000,1,11,7,21,0.057534247,18.9,530
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012, ,1,22,32.342,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,531
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,28/09/2012,9,20.24,32.276,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,532
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,07/02/2012,2,19.05,31.218,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,533
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,17/06/2012,6,22.3,31.159,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,534
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,18/11/2012,11,18,30.411,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,535
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,04/10/2012,10,7.08,30.234,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,536
+Cougar,Carnivore,All structures built,12,0.890523164,8,0.890410826,1,2012,10/09/2012,9,20.3,28.934,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,537
+Elk,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,12/07/2012,7,23,28.514,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,538
+Coyote,Carnivore,All structures built,12,0.890523164,8,0.890410826,1,2012,08/09/2012,9,21.3,28.482,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,539
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,18/05/2012,5,14,28.37,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,540
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,24/11/2012,11,19.3,28.29,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,541
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,30/05/2012,5,22.4,27.917,1,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,542
+Moose,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,29/07/2012,7,23.08,25.946,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,543
+Bear,Carnivore,All structures built,12,0.890523164,8,0.890410826,1,2012,20/09/2012,9,22.51,25.898,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,544
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,10/07/2012,7,20,25.762,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,545
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,20/05/2012,5,13.31,24.664,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,546
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,30/09/2012,9,20.3,24.551,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,547
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,03/07/2012,7,6.2,24.099,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,548
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,27/04/2012,4,7.1,24.03,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,549
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,01/05/2012,5,17.3,24.009,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,550
+Elk,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,03/08/2012,8,23.17,23.912,1,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,551
+Elk,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,03/08/2012,8,23.3,23.828,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,552
+Deer,Ungulate,All structures built,12,0.890523164,8,0.890410826,1,2012,22/08/2012,8,7.15,23.338,0,0,All structures built,2012,2000,1,12,8,23,0.063013699,18.9,553
+Deer,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,01/03/2013,3,20,31.594,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,554
+Elk,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,30/11/2013,11,7.3,31.566,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,555
+Deer,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,14/08/2013,8,8.1,31.333,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,556
+Deer,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,26/05/2013,5,4,31.177,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,557
+Bear,Carnivore,All structures built,13,0.978597851,9,0.978480239,1,2013,05/09/2013,9,22.05,23.451,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,558
+Coyote,Carnivore,All structures built,13,0.978597851,9,0.978480239,1,2013,03/04/2013,4,1.45,23.223,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,559
+Deer,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,17/07/2013,7,22.3,22.249,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,560
+Deer,Ungulate,All structures built,13,0.978597851,9,0.978480239,1,2013,12/08/2013,8,19,21.361,0,0,All structures built,2013,2000,1,13,9,8,0.021917808,18.9,561
+Elk,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,02/03/2014,3,20,31.864,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,562
+Elk,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,23/11/2014,11,22.25,31.23,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,563
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,22/11/2014,11,17.2,30.228,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,564
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,10/06/2014,6,6.4,29.774,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,565
+Bear,Carnivore,All structures built,14,1.066672538,10,1.066549652,1,2014,05/07/2014,7,23,29.313,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,566
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,15/08/2014,8,3.39,24.944,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,567
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,26/10/2014,10,3.3,24.111,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,568
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,29/07/2014,7,6,23.873,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,569
+Deer,Ungulate,All structures built,14,1.066672538,10,1.066549652,1,2014,24/06/2014,6,13,22.086,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,570
+Wolf,Carnivore,All structures built,14,1.066672538,10,1.066549652,1,2014,05/04/2014,4,22,20.327,0,0,All structures built,2014,2000,1,14,10,10,0.02739726,18.9,571
