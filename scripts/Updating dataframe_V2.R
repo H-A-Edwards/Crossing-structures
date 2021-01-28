@@ -1,3 +1,17 @@
+#-----------------------------------------------------
+
+# Script to to create the dataset newdata.
+# We use the data from traffic_data (from Alberta Transportation) and merge it with
+# CSdata (from Alberta Parks) to get the two-way hourly traffic data
+# AND CREATE A HOURLY/MONTHLY/ANNUAL COUNT
+# We group the data by carnivores, ungulates and humans
+# We create a structure location, structure type, structure age (centred) and and year built column
+# We create a human count data from the total column AND THEN CREATE A HOURLY/MONTHLY/ANNUAL COUNT
+# The number of time a camera is serviced is calculate in the sampling effort column
+# We create hourly counts of ungulates and carnivores-REGARDLESS OF MONTH/YEAR
+# We create monthly counts of ungulates and carnivores-REGARDLESS OF YEAR
+# We create annual counts of ungulates and carnivores
+
 rm(list = ls())
 
 #-----------------Set working directory--------------------
@@ -143,6 +157,9 @@ newdata$Date.structure.built[newdata$Location2 == "Dead Man's"] = "2004"
 newdata$Structure.age = NA
 newdata$Date.structure.built = as.numeric(newdata$Date.structure.built)
 newdata$Structure.age = newdata$Year - newdata$Date.structure.built
+# Centering age
+newdata$Agecentred = NA
+newdata$Agecentred = scale(newdata[,31], center = TRUE, scale = FALSE)
 
 # Human.total.x column
 for (i in 1:nrow(newdata)) {
@@ -153,10 +170,6 @@ for (i in 1:nrow(newdata)) {
   }
 }
 newdata <- transform(newdata, Human.total.x = ifelse(Species.grouped == "Human", Total, 0))
-
-# Centering age
-newdata$Agecentred = NA
-newdata$Agecentred = scale(newdata[,31], center = TRUE, scale = FALSE)
 
 ####Calculate sampling effort column
 CSCameraEffort = read.csv("camera effort.csv")
