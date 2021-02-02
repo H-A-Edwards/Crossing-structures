@@ -40,6 +40,9 @@ levels(as.factor(csdata$HourEnding))
 # Traffic data
 trafficdata = read.csv("traffic_data.csv")
 
+#Remove excess NAs in the dataset
+trafficdata <- trafficdata[!is.na(trafficdata$Two.way),]
+
 # Change date format in traffic data
 trafficdata$Date = NA
 trafficdata$Date = paste(trafficdata$Year,trafficdata$Month,trafficdata$Day, sep = "-")
@@ -190,51 +193,156 @@ effort$Year = as.factor(effort$Year)
 newdata$Year = as.factor(newdata$Year)
 
 newdata_effort = left_join(newdata, effort, by = c("Year", "Location"))
+#Give locations not sampled a zero
 newdata_effort$Sampling.effort[is.na(newdata_effort$Sampling.effort)] <- 0
+#Remove images with no traffic data e.g. images later than Nov 2018
+newdata_effort = newdata_effort[!is.na(newdata_effort$Two.way),]
 
-write.csv(newdata_effort, "newdata.csv")
+write.csv(newdata_effort, "newdata.csv", row.names=FALSE)
 
-# Omit rows with NA traffic
+# Read in new dataframe
 newdata = read.csv("newdata.csv")
 
 ################################################################################
 #--------------------Not sure what the carnivore and ungulate traffic dataset are
 
-ungulates_traffic = ungulates_traffic[!is.na(newdata$Two.way),]
-carnivores_traffic = carnivores_traffic[!is.na(carnivores_traffic$Two.way),]
+#ungulates_traffic = ungulates_traffic[!is.na(newdata$Two.way),]
+#carnivores_traffic = carnivores_traffic[!is.na(carnivores_traffic$Two.way),]
 
 # Create column with number of crossings per guild,
 ## per Hour, for each day + month + year, and each location and structure type
 ################################################################################
 #---------------------Why group by year, month, age/human total etc.
 
+#hourly.crossings = (
+ # newdata %>%
+ #   group_by(Species.grouped, HourEnding, Day, Month, Year, Underpass.type,
+  #           Location2, Structure.age, Human.total.x, Agecentred, Sampling.effort,
+   #          #Hour.sq,Month.sq,
+  #           Two.way) %>%
+  #  summarise(Crossings = length(Species.grouped))
+#)
+
+#Don't we just want to look at hour alone at each location and structure type?
+#----------------------------------No. of hourly crossings------------------------------
 hourly.crossings = (
   newdata %>%
-    group_by(Species.grouped, HourEnding, Day, Month, Year, Underpass.type,
-             Location2, Structure.age, Human.total.x, Agecentred, Sampling.effort,
-             #Hour.sq,Month.sq,
-             Two.way) %>%
-    summarise(Crossings = length(Species.grouped))
-)
-
-#Don't we just want to look at hour alone at each location and strcuture type?
-hourly.crossings2 = (
-  newdata %>%
     group_by(Species.grouped, HourEnding, Underpass.type,
-             Location2,) %>%
-    summarise(Crossings = length(Species.grouped))
+             Location2) %>%
+    summarise(Hourly.crossings = sum(Total))
 )
 
-hourly.crossings$X = NULL
-hourly.crossings$HourEnding = as.factor(hourly.crossings$HourEnding)
-hourly.crossings$Day = as.factor(hourly.crossings$Day)
-hourly.crossings$Month = as.factor(hourly.crossings$Month)
-hourly.crossings$Year = as.factor(hourly.crossings$Year)
-hourly.crossings$HourEnding = as.factor(hourly.crossings$HourEnding)
-hourly.crossings$Sampling.effort = as.factor(hourly.crossings$Sampling.effort)
-hourly.crossings$Hour.sq = as.integer(hourly.crossings$Hour.sq)
+newdata$HourEnding<-as.factor(newdata$HourEnding)
+newdata = left_join(newdata, Hourly.crossings, by = c("Underpass.type", "Location2",
+                                                       "HourEnding", "Species.grouped"))
 
-write.csv(hourly.crossings, "hourly crossings.csv")
+
+#----------------------------------No. of monthly crossings------------------------------
+
+monthly.crossings = (
+  newdata %>%
+    group_by(Species.grouped, Month, Underpass.type,
+             Location2) %>%
+    summarise(Monthly.crossings = sum(Total))
+)
+
+newdata$Month<-as.factor(newdata$Month)
+newdata = left_join(newdata, monthly.crossings, by = c("Underpass.type", "Location2",
+                                                       "Month", "Species.grouped"))
+
+
+#----------------------------------No. of annual crossings------------------------------
+
+annual.crossings = (
+  newdata %>%
+    group_by(Species.grouped, Year, Underpass.type,
+             Location2) %>%
+    summarise(Annual.crossings = sum(Total))
+)
+
+newdata$Year<-as.factor(newdata$Year)
+annual.crossings$Year<-as.factor(annual.crossings$Year)
+newdata = left_join(newdata, annual.crossings, by = c("Underpass.type", "Location2",
+                                                       "Year", "Species.grouped"))
+
+
+#--------------------------------No. hourly two way traffic-----------------------------
+
+hourly.traffic.crossings = (
+  newdata %>%
+    group_by(HourEnding, Underpass.type,
+             Location2) %>%
+    summarise(hourly.traffic.crossings = sum(Two.way))
+)
+
+newdata = left_join(newdata, hourly.traffic.crossings, by = c("Underpass.type", "Location2",
+                                                      "HourEnding"))
+
+
+#--------------------------------No. monthy two way traffic-----------------------------
+
+monthly.traffic.crossings = (
+  newdata %>%
+    group_by(Month, Underpass.type,
+             Location2) %>%
+    summarise(monthly.traffic.crossings = sum(Two.way))
+)
+
+newdata = left_join(newdata, monthly.traffic.crossings, by = c("Underpass.type", "Location2",
+                                                               "Month"))
+
+#--------------------------------No. annual two way traffic-----------------------------
+
+annual.traffic.crossings = (
+  newdata %>%
+    group_by(Year, Underpass.type,
+             Location2) %>%
+    summarise(annual.traffic.crossings = sum(Two.way))
+)
+
+newdata$Year<-as.factor(newdata$Year)
+newdata = left_join(newdata, annual.traffic.crossings, by = c("Underpass.type", "Location2",
+                                                               "Year"))
+
+#--------------------Subset data by guild and crossing structure type-------------------
+
+Ungulate.jumpouts <- newdata[newdata$Species.grouped=="Ungulates" & newdata$Underpass.type=="Jumpout",]
+Ungulate.underpass <- newdata[newdata$Species.grouped=="Ungulates" & newdata$Underpass.type=="Underpass",]
+Carnivore.jumpouts <- newdata[newdata$Species.grouped=="Carnivores" & newdata$Underpass.type=="Jumpout",]
+Carnivore.underpass <- newdata[newdata$Species.grouped=="Carnivores" & newdata$Underpass.type=="Underpass",]
+
+#---------------------Creat Human count column
+Humanuse <- newdata[newdata$Species.grouped=="Human",]
+library(plyr)
+Humanuse<-rename(Humanuse, c("Hourly.crossings"="Human.hourly.crossings", "Monthly.crossings"="Human.monthly.crossings",
+                             "Annual.crossings"="Human.annual.crossings"))
+Humanuse.jumpout<-Humanuse[Humanuse$Underpass.type=="Jumpout",]
+Humanuse.underpass<-Humanuse[Humanuse$Underpass.type=="Underpass",]
+
+Humanuse.jumpout.hour<-Humanuse.jumpout %>%
+  select(Human.hourly.crossings, Location2,
+          HourEnding)
+Humanuse.underpass<-Humanuse.underpass %>%
+  select(Human.hourly.crossings, Human.monthly.crossings, Human.annual.crossings, Location2,
+         Underpass.type, HourEnding, Month, Year)
+
+Ungulate.jumpouts$Location2<-as.factor(Ungulate.jumpouts$Location2)
+Humanuse.jumpout.hour$Location2<-as.factor(Humanuse.jumpout.hour$Location2)
+Ungulate.jumpouts.hour = left_join(Ungulate.jumpouts, Humanuse.jumpout.hour, by = c("Location2",
+                                                              "HourEnding"))
+
+
+#--------------------------------No. annual two way traffic-----------------------------
+#hourly.crossings$X = NULL
+#hourly.crossings$HourEnding = as.factor(hourly.crossings$HourEnding)
+#hourly.crossings$Day = as.factor(hourly.crossings$Day)
+#hourly.crossings$Month = as.factor(hourly.crossings$Month)
+#hourly.crossings$Year = as.factor(hourly.crossings$Year)
+#hourly.crossings$HourEnding = as.factor(hourly.crossings$HourEnding)
+#hourly.crossings$Sampling.effort = as.factor(hourly.crossings$Sampling.effort)
+#hourly.crossings$Hour.sq = as.integer(hourly.crossings$Hour.sq)
+
+write.csv(hourly.crossings, "hourly crossings.csv", row.names=FALSE)
 
 trafficdata$Year = as.factor(trafficdata$Year)
 ungulates$Year = as.factor(ungulates$Year)
