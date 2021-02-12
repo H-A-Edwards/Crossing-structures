@@ -1,7 +1,8 @@
 ---
 title: "Crossing structures data exploration"
-
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r, echo=FALSE, include=FALSE}
@@ -257,7 +258,21 @@ carnivores.under<-subset(newdata, newdata$Species.grouped == "Carnivores" &
                                  newdata$Underpass.type == "Underpass")
 carnivores.jump<-subset(newdata, newdata$Species.grouped == "Carnivores" &
                           newdata$Underpass.type == "Jumpout")
+carnivores<-subset(newdata, newdata$Species.grouped == "Carnivores")
+Bobcat<-subset(newdata, newdata$Species == "Bobcat")
+Cougar<-subset(newdata, newdata$Species == "Cougar")
+Coyote<-subset(newdata, newdata$Species == "Coyote")
+GrizzlyBear<-subset(newdata, newdata$Species == "Grizzly Bear")
+Lynx<-subset(newdata, newdata$Species == "Lynx")
+Marten<-subset(newdata, newdata$Species == "Marten")
+RedFox<-subset(newdata, newdata$Species == "Red Fox")
+StripedSkunk<-subset(newdata, newdata$Species == "Striped Skunk")
+UnknownBear<-subset(newdata, newdata$Species == "Unknown Bear")
+Wolf<-subset(newdata, newdata$Species == "Wolf")
+Wolverine<-subset(newdata, newdata$Species == "Wolverine")
 ```
+
+#Ungulate and carnivore hours of activity
 
 ```{r, eval=TRUE, echo=FALSE}
 #Make data circular with hourending
@@ -283,6 +298,8 @@ b<-rose.diag(carhourc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
              xlab="Carnivore hour frequency")
 ```
 
+#Ungulate and carnivore months of activity
+
 ```{r, eval=TRUE, echo=FALSE}
 #Make data circular with Month
 #Vector
@@ -305,4 +322,143 @@ plot(carmonc)
 ```{r, eval=TRUE, echo=FALSE}
 d<-rose.diag(carmonc, bins=12, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
              xlab="Carnivore month frequency")
+```
+
+#Carnivores hours of activity separated by species
+
+```{r, eval=TRUE, echo=FALSE}
+#Make data circular with hour for each carnivore species
+carnivores$Species<-as.factor(carnivores$Species)
+summary(carnivores$Species)
+
+#Bobcat
+Bobcathou<-Bobcat$HourEnding
+Bobcathouc <- circular(Bobcathou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Bobcathouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Bobcathouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Bobcat hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Coyote
+Coyotehou<-Coyote$HourEnding
+Coyotehouc <- circular(Coyotehou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Coyotehouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Coyotehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Coyote hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Cougar
+Cougarhou<-Cougar$HourEnding
+Cougarhouc <- circular(Cougarhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Cougarhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Cougarhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Cougar hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Grizzly Bear
+GrizzlyBearhou<-GrizzlyBear$HourEnding
+GrizzlyBearhouc <- circular(GrizzlyBearhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(GrizzlyBearhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(GrizzlyBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="GrizzlyBear hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Lynx
+Lynxhou<-Lynx$HourEnding
+Lynxhouc <- circular(Lynxhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Lynxhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Lynxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Lynx hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Marten
+Martenhou<-Marten$HourEnding
+Martenhouc <- circular(Martenhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Martenhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Martenhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Marten hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#RedFox
+RedFoxhou<-RedFox$HourEnding
+RedFoxhouc <- circular(RedFoxhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(RedFoxhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(RedFoxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="RedFox hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#StripedSkunk
+StripedSkunkhou<-StripedSkunk$HourEnding
+StripedSkunkhouc <- circular(StripedSkunkhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(StripedSkunkhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(StripedSkunkhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="StripedSkunk hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#UnknownBear
+UnknownBearhou<-UnknownBear$HourEnding
+UnknownBearhouc <- circular(UnknownBearhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(UnknownBearhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(UnknownBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="UnknownBear hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Wolf
+Wolfhou<-Wolf$HourEnding
+Wolfhouc <- circular(Wolfhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Wolfhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Wolfhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolf hour frequency")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Wolverine
+Wolverinehou<-Wolverine$HourEnding
+Wolverinehouc <- circular(Wolverinehou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Wolverinehouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Wolverinehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolverine hour frequency")
 ```

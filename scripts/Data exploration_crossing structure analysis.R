@@ -220,6 +220,18 @@ carnivores.under<-subset(newdata, newdata$Species.grouped == "Carnivores" &
                                  newdata$Underpass.type == "Underpass")
 carnivores.jump<-subset(newdata, newdata$Species.grouped == "Carnivores" &
                           newdata$Underpass.type == "Jumpout")
+carnivores<-subset(newdata, newdata$Species.grouped == "Carnivores")
+Bobcat<-subset(newdata, newdata$Species == "Bobcat")
+Cougar<-subset(newdata, newdata$Species == "Cougar")
+Coyote<-subset(newdata, newdata$Species == "Coyote")
+GrizzlyBear<-subset(newdata, newdata$Species == "Grizzly Bear")
+Lynx<-subset(newdata, newdata$Species == "Lynx")
+Marten<-subset(newdata, newdata$Species == "Marten")
+RedFox<-subset(newdata, newdata$Species == "Red Fox")
+StripedSkunk<-subset(newdata, newdata$Species == "Striped Skunk")
+UnknownBear<-subset(newdata, newdata$Species == "Unknown Bear")
+Wolf<-subset(newdata, newdata$Species == "Wolf")
+Wolverine<-subset(newdata, newdata$Species == "Wolverine")
 
 #Make data circular with hourending
 #Vector
@@ -249,4 +261,85 @@ c<-rose.diag(ungmonc, bins=12, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
 plot(carmonc)
 d<-rose.diag(carmonc, bins=12, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
              xlab="Carnivore month frequency")
+
+#Make data circular with hour for each carnivore species
+carnivores$Species<-as.factor(carnivores$Species)
+summary(carnivores$Species)
+
+#Bobcat
+Bobcathou<-Bobcat$HourEnding
+Bobcathouc <- circular(Bobcathou, units="hours", template="clock24")
+plot(Bobcathouc)
+c<-rose.diag(Bobcathouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Bobcat hour frequency")
+
+#Coyote
+Coyotehou<-Coyote$HourEnding
+Coyotehouc <- circular(Coyotehou, units="hours", template="clock24")
+plot(Coyotehouc)
+c<-rose.diag(Coyotehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Coyote hour frequency")
+
+#Grizzly Bear
+GrizzlyBearhou<-GrizzlyBear$HourEnding
+GrizzlyBearhouc <- circular(GrizzlyBearhou, units="hours", template="clock24")
+plot(GrizzlyBearhouc)
+c<-rose.diag(GrizzlyBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="GrizzlyBear hour frequency")
+
+#Lynx
+Lynxhou<-Lynx$HourEnding
+Lynxhouc <- circular(Lynxhou, units="hours", template="clock24")
+plot(Lynxhouc)
+c<-rose.diag(Lynxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Lynx hour frequency")
+
+#Marten
+Martenhou<-Marten$HourEnding
+Martenhouc <- circular(Martenhou, units="hours", template="clock24")
+plot(Martenhouc)
+c<-rose.diag(Martenhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Marten hour frequency")
+
+#RedFox
+RedFoxhou<-RedFox$HourEnding
+RedFoxhouc <- circular(RedFoxhou, units="hours", template="clock24")
+plot(RedFoxhouc)
+c<-rose.diag(RedFoxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="RedFox hour frequency")
+
+#StripedSkunk
+StripedSkunkhou<-StripedSkunk$HourEnding
+StripedSkunkhouc <- circular(StripedSkunkhou, units="hours", template="clock24")
+plot(StripedSkunkhouc)
+c<-rose.diag(StripedSkunkhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="StripedSkunk hour frequency")
+
+#UnknownBear
+UnknownBearhou<-UnknownBear$HourEnding
+UnknownBearhouc <- circular(UnknownBearhou, units="hours", template="clock24")
+plot(UnknownBearhouc)
+c<-rose.diag(UnknownBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="UnknownBear hour frequency")
+
+#Wolf
+Wolfhou<-Wolf$HourEnding
+Wolfhouc <- circular(Wolfhou, units="hours", template="clock24")
+plot(Wolfhouc)
+c<-rose.diag(Wolfhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolf hour frequency")
+
+#Wolverine
+Wolverinehou<-Wolverine$HourEnding
+Wolverinehouc <- circular(Wolverinehou, units="hours", template="clock24")
+plot(Wolverinehouc)
+c<-rose.diag(Wolverinehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolverine hour frequency")
+#Cougar
+Cougarhou<-Cougar$HourEnding
+Cougarhouc <- circular(Cougarhou, units="hours", template="clock24")
+plot(Cougarhouc)
+c<-rose.diag(Cougarhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Cougar hour frequency")
+
 

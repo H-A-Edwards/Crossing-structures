@@ -1,0 +1,602 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Crossing structures data exploration},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Crossing structures data exploration}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\#------------------------Look for outliers in guild
+count----------------------------
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    3.00    8.00   18.38   28.00  139.00
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    2.00    7.50   16.50   25.25   71.00
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   1.000   4.000   8.493  11.000  41.000
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-3.pdf}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     5.0    35.0   111.0   339.3   656.0  1459.0
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-4.pdf}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     0.0    21.0    78.5   287.4   228.0  2233.0
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-5.pdf}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00   13.75   39.00  152.34  225.75  971.00
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-2-6.pdf}
+
+\#----------------------------Check for
+autocorrelation--------------------------
+
+\#Annual carnivore count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.ann.count.jump.mod
+## DW = 2.0072, p-value = 0.5094
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.ann.count.under.mod
+## DW = 2.2295, p-value = 0.7122
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.ann.count.jump
+## X-squared = 0.0050245, df = 1, p-value = 0.9435
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.ann.count.under
+## X-squared = 0.42612, df = 1, p-value = 0.5139
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.ann.count.jump
+## X-squared = 0.0053921, df = 1, p-value = 0.9415
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.ann.count.under
+## X-squared = 0.48423, df = 1, p-value = 0.4865
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-4-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\begin{verbatim}
+## [1] 30.98548
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 1026.545
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 5.452381
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 42
+\end{verbatim}
+
+\#Monthly carnivore count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.mon.count.jump.mod
+## DW = 1.9558, p-value = 0.4413
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.mon.count.under.mod
+## DW = 1.3809, p-value = 0.06541
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.mon.count.jump
+## X-squared = 0.0076303, df = 1, p-value = 0.9304
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.mon.count.under
+## X-squared = 1.6652, df = 1, p-value = 0.1969
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.mon.count.jump
+## X-squared = 0.0081627, df = 1, p-value = 0.928
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.mon.count.under
+## X-squared = 1.9031, df = 1, p-value = 0.1677
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-5-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-5-2.pdf}
+
+\begin{verbatim}
+## [1] 28.14535
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 290.9524
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 4.75
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 40
+\end{verbatim}
+
+\#Hourly carnivore count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.hou.count.jump.mod
+## DW = 2.0547, p-value = 0.6039
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  car.hou.count.under.mod
+## DW = 1.1157, p-value = 0.0005755
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.hou.count.jump
+## X-squared = 0.12606, df = 1, p-value = 0.7225
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  car.hou.count.under
+## X-squared = 9.3274, df = 1, p-value = 0.002258
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.hou.count.jump
+## X-squared = 0.13022, df = 1, p-value = 0.7182
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  car.hou.count.under
+## X-squared = 9.9228, df = 1, p-value = 0.001632
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-6-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-6-2.pdf}
+
+\begin{verbatim}
+## [1] 4.824056
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 104.9787
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 2.48913
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 20
+\end{verbatim}
+
+\#Annual ungulate count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.ann.count.jump.mod
+## DW = 2.0059, p-value = 0.5076
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.ann.count.under.mod
+## DW = 2.0356, p-value = 0.5345
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.ann.count.jump
+## X-squared = 0.026127, df = 1, p-value = 0.8716
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.ann.count.under
+## X-squared = 0.17021, df = 1, p-value = 0.6799
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.ann.count.jump
+## X-squared = 0.028039, df = 1, p-value = 0.867
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.ann.count.under
+## X-squared = 0.19342, df = 1, p-value = 0.6601
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-7-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-7-2.pdf}
+
+\begin{verbatim}
+## [1] 4612.707
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 95876.27
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 73.97619
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 823.7826
+\end{verbatim}
+
+\#Monthly ungulate count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.mon.count.jump.mod
+## DW = 1.7697, p-value = 0.2202
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.mon.count.under.mod
+## DW = 2.2158, p-value = 0.6968
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.mon.count.jump
+## X-squared = 0.45702, df = 1, p-value = 0.499
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.mon.count.under
+## X-squared = 0.42195, df = 1, p-value = 0.516
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.mon.count.jump
+## X-squared = 0.4889, df = 1, p-value = 0.4844
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.mon.count.under
+## X-squared = 0.48223, df = 1, p-value = 0.4874
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-8-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-8-2.pdf}
+
+\begin{verbatim}
+## [1] 3076.809
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 410350.8
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 54.43182
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 753.2273
+\end{verbatim}
+
+\#Hourly ungulate count for jumpouts and underpasses separately
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.hou.count.jump.mod
+## DW = 1.7999, p-value = 0.1622
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Durbin-Watson test
+## 
+## data:  ung.hou.count.under.mod
+## DW = 1.7076, p-value = 0.1528
+## alternative hypothesis: true autocorrelation is greater than 0
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.hou.count.jump
+## X-squared = 0.86991, df = 1, p-value = 0.351
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Pierce test
+## 
+## data:  ung.hou.count.under
+## X-squared = 0.7838, df = 1, p-value = 0.376
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.hou.count.jump
+## X-squared = 0.89738, df = 1, p-value = 0.3435
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Box-Ljung test
+## 
+## data:  ung.hou.count.under
+## X-squared = 0.83383, df = 1, p-value = 0.3612
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-9-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-9-2.pdf}
+
+\begin{verbatim}
+## [1] 1061.855
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 41362.93
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 32.36458
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 392.2917
+\end{verbatim}
+
+\#-----------------------------Violin
+plots--------------------------------
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-11-1.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-11-2.pdf}
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-11-3.pdf}
+
+\#-----------------Look at whether there is circularity in the
+dataset--------------------
+
+\#Ungulate and carnivore hours of activity
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-17-1.pdf}
+
+\#Ungulate and carnivore months of activity
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+\#Carnivores hours of activity separated by species
+
+\begin{verbatim}
+##        Bobcat        Cougar        Coyote  Grizzly Bear          Lynx 
+##             6           323           653            26             1 
+##        Marten       Red Fox Striped Skunk  Unknown Bear          Wolf 
+##             1             7             1             9            13 
+##     Wolverine 
+##             1
+\end{verbatim}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-25-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-31-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-34-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-37-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-40-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-43-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-46-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-49-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-52-1.pdf}
+
+\includegraphics{Data-exploration_crossing-structure_files/figure-latex/unnamed-chunk-55-1.pdf}
+
+\end{document}
