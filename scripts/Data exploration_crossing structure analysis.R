@@ -44,14 +44,20 @@ carnivores.annual.under<-subset(carnivores.annual, carnivores.annual$Underpass.t
 carnivores.annual.jump<-subset(carnivores.annual, carnivores.annual$Underpass.type != "Underpass")
 
 #Look for outliers in guild count
-boxplot(carnivores.annual$Total)#139 count outlier checked
-hist(carnivores.annual$Total, xlab="Total annual carnivore count per crossing structure",
-     main=NULL, ylim=c(0,50))
-summary(carnivores.annual$Total)
+boxplot(carnivores.annual.under$Total)#139 count outlier checked
+summary(carnivores.annual.under$Total)
+hist(carnivores.annual.under$Total, xlab="Total annual carnivore count per underpass",
+     main=NULL, ylim=c(0,20))
+#Number of Zeros
+sum(carnivores.annual.under$Total == 0) 
+
 boxplot(carnivores.monthly$Total)#42 count outlier checked
 summary(carnivores.monthly$Total)
 hist(carnivores.monthly$Total, xlab="Total monthly carnivore count per crossing structure",
      main=NULL, ylim=c(0,40))
+#Number of Zeros
+sum(carnivores.annual.under$Total == 0) 
+
 boxplot(carnivores.hourly$Total)#41 count outlier checked
 summary(carnivores.hourly$Total)
 hist(carnivores.hourly$Total, xlab="Total hourly carnivore count per crossing structure",
