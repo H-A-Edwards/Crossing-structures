@@ -1,17 +1,17 @@
 #-----------------------------------------------------
 
-# Script to to create the dataset newdata.
-# We use the data from traffic_data (from Alberta Transportation) to create hourly/monthly/annual
+# Script to to create the individual datasets for small/large carnivores and ungulates by day/season/year
+# We use the data from traffic_data (from Alberta Transportation) to create (crep/day/night)/seasonal/annual
 # averages of the two-way hourly traffic data and merge with the
 # CSdata (from Alberta Parks)
 # We group the data by carnivores, ungulates and humans
 # We create a structure location, structure type, structure age (centred) and year built column
-# We create a human count data from the total column to create hourly/monthly/annual
+# We create a human count data from the total column to create (crep/day/night)/seasonal/annual
 # averages of the human count
 # The number of times a camera is serviced is calculated per year and on average per year
 # in the annual effort and average effort column respectively
-# We create hourly counts of ungulates and carnivores from the total column, binned by peak activity
-# We create monthly counts of ungulates and carnivores from the total column, binned by peak activity
+# We create crep/day/night counts of ungulates and carnivores from the total column, binned by peak activity
+# We create seasonal counts of ungulates and carnivores from the total column, binned by peak activity
 # We create annual counts of ungulates and carnivores from the total column
 
 rm(list = ls())
@@ -272,7 +272,7 @@ newdata$Structure.age = NA
 newdata$Date.structure.built = as.numeric(newdata$Date.structure.built)
 newdata$Structure.age = newdata$Year - newdata$Date.structure.built
 
-#-------------------------Average number of daynigh humans----------------------
+#-------------------------Average number of daynight humans----------------------
 #Create new human dataset
 Humanuse <- newdata[newdata$Species.body.mass=="Human",]
 
