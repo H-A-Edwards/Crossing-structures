@@ -82,14 +82,11 @@ annual.traffic = (
 
 newdata = left_join(newdata, annual.traffic, by = c("Year"))
                                                               
-#Hannah's df for comparison
-#olddata = read.csv("Underpass_2008_2016.csv", header=T)
-
 # Create new column for guild
 newdata$Species.grouped = NA
 
 newdata$Species = as.factor(newdata$Species)
-newdata$Species.grouped[newdata$Species == "Black bear"] = "Carnivores"
+newdata$Species.grouped[newdata$Species == "Black Bear"] = "Carnivores"
 newdata$Species.grouped[newdata$Species == "Cougar"] = "Carnivores"
 newdata$Species.grouped[newdata$Species == "Unknown Bear"] = "Carnivores"
 newdata$Species.grouped[newdata$Species == "Wolf"] = "Carnivores"
@@ -127,6 +124,22 @@ newdata$Species.grouped[newdata$Species == "Worker (not Parks)"] = "Human"
 #remove rows with Species.grouped = NA
 newdata<-subset(newdata, !is.na(newdata$Species.grouped))
 newdata$Species.grouped = as.factor(newdata$Species.grouped)
+
+#group species by body weight
+#newdata$Species.body.mass[newdata$Species == "Black bear"] = "Carn"
+#newdata$Species.body.mass[newdata$Species == "Cougar"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Unknown Bear"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Wolf"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Bobcat"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Grizzly Bear"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Wolverine"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Lynx"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Coyote"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Marten"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Striped Skunk"] = "Carnivores"
+#newdata$Species.body.mass[newdata$Species == "Red Fox"] = "Carnivores"
+
+
 
 #remove unnecessary columns
 newdata$ImageID = NULL
@@ -329,12 +342,12 @@ write.csv(ungulates.hourly, "ungulates hourly.csv")
 
 # Hourly ungulates-use average sampling effort and binned hours
 #--------------------------------------Bin traffic by same hour chunks------------------------------------------------
-ungulates.hourly2 <- aggregate(Total ~
-                                HourEnding3 + Location2 +
-                                Underpass.type+average.effort + 
-                                hourly.traffic+hourly.human+Agecentred ,
-                              ungulates_humans, sum)
-
+#ungulates.hourly2 <- aggregate(Total ~
+                                #HourEnding3 + Location2 +
+                                #Underpass.type+average.effort + 
+                                #hourly.traffic+hourly.human+Agecentred ,
+                              #ungulates_humans, sum)
+#----------------------------------------------------------------------------------------------------------------------
 
 # Hourly carnivores-use average sampling effort
 carnivores.hourly = aggregate(Total ~
