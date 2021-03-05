@@ -1,9 +1,9 @@
 ---
-title: "Small ungulate crossing structure analysis"
+title: "Big carnivore crossing structure analysis"
 output: pdf_document
 ---
 
-# Script to run GLMM to look at the temporal variation in small ungulate use of underpasses and jumpouts We first separate out the day/season/annual counts by structure type and explore the influence of time of day (crep/day/night) for the day counts, season for the season counts and year for the annual counts. We also explore the influence of vehicles and humans. For all daily/seasonal underpass models only the day/season parameter is explored as the sample size for these models is too small to sample more parameters. The traffic varible is dropped from all models as it was extremely collinear with the day/season/year parameter.
+# Script to run GLMM to look at the temporal variation in big carnivore use of underpasses and jumpouts We first separate out the day/season/annual counts by structure type and explore the influence of time of day (crep/day/night) for the day counts, season for the season counts and year for the annual counts. We also explore the influence of vehicles and humans. For all daily/seasonal underpass models only the day/season parameter is explored as the sample size for these models is too small to sample more parameters. The traffic varible is dropped from all models as it was extremely collinear with the day/season/year parameter.
 
 # Model structure: count (per structure) ~ crep/day/night or season + traffic volume + human use +
 # Location + random = sampling effort
@@ -19,24 +19,25 @@ library(MCMCglmm)
 
 #----------------Load datasets----------------------------
 
-smallungulates.day <- read.csv("Smallungulates hourly daynight.csv")
-smallungulates.season <- read.csv("Smallungulates seasonal.csv")
-smallungulates.annual <- read.csv("Smallungulates annual.csv")
+bigcarnivores.day <- read.csv("Bigcarnivores hourly daynight.csv")
+bigcarnivores.season <- read.csv("Bigcarnivores seasonal.csv")
+bigcarnivores.annual <- read.csv("Bigcarnivores annual.csv")
 
 #Separate out by crossing structure type
-smallungulates.day.under<-subset(smallungulates.day, smallungulates.day$Underpass.type != "Jumpout")
-smallungulates.day.jump<-subset(smallungulates.day, smallungulates.day$Underpass.type != "Underpass")
-smallungulates.season.under<-subset(smallungulates.season, smallungulates.season$Underpass.type != "Jumpout")
-smallungulates.season.jump<-subset(smallungulates.season, smallungulates.season$Underpass.type != "Underpass")
-smallungulates.annual.under<-subset(smallungulates.annual, smallungulates.annual$Underpass.type != "Jumpout")
-smallungulates.annual.jump<-subset(smallungulates.annual, smallungulates.annual$Underpass.type != "Underpass")
+#Did not run for big carnivore jumpout sample size small use circular plots as evidence
+bigcarnivores.day.under<-subset(bigcarnivores.day, bigcarnivores.day$Underpass.type != "Jumpout")
+bigcarnivores.day.jump<-subset(bigcarnivores.day, bigcarnivores.day$Underpass.type != "Underpass")
+bigcarnivores.season.under<-subset(bigcarnivores.season, bigcarnivores.season$Underpass.type != "Jumpout")
+bigcarnivores.season.jump<-subset(bigcarnivores.season, bigcarnivores.season$Underpass.type != "Underpass")
+bigcarnivores.annual.under<-subset(bigcarnivores.annual, bigcarnivores.annual$Underpass.type != "Jumpout")
+bigcarnivores.annual.jump<-subset(bigcarnivores.annual, bigcarnivores.annual$Underpass.type != "Underpass")
 
 # aim to store 1,000-2,000 iterations
 # have the autocorrelation between successive stored iterations less than 0.1
 # fixed effects: interesting in themselves
 # random effects: only underlying population is of interest
 ```
-## Small daily ungulates
+## big daily carnivores
 ```{r, eval=TRUE, echo=TRUE}
 prior<-list(R=list(V=1, nu=0.002), 
             G = list(G1 = list(V = 1, nu = 0.002)))
@@ -47,199 +48,199 @@ prioexp<- list(R = list(V = 1, nu=0.002), #residuals prior
 ```
 ## Underpass
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.day.under$Location2<-as.factor(smallcarnivores.day.under$Location2)
-smallungulates.day.under$daynight<-as.factor(smallcarnivores.day.under$daynight)
+bigcarnivores.day.under$Location2<-as.factor(bigcarnivores.day.under$Location2)
+bigcarnivores.day.under$daynight<-as.factor(bigcarnivores.day.under$daynight)
 
-smallungulate.day.under <- MCMCglmm(Total ~
+bigcarnivore.day.under <- MCMCglmm(Total ~
                                       daynight,
                                     random = ~ average.effort ,
                                     prior = prior, nitt=1003000, burnin=100000, thin=500,
                                     verbose = FALSE,
                                     family = "poisson",
-                                    data = smallungulates.day.under)
+                                    data = bigcarnivores.day.under)
 
 
-smallungulate.day.under.exp <- MCMCglmm(Total ~
+bigcarnivore.day.under.exp <- MCMCglmm(Total ~
                                       daynight,
                                     random = ~ average.effort ,
                                     prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                     verbose = FALSE,
                                     family = "poisson",
-                                    data = smallungulates.day.under)
+                                    data = bigcarnivores.day.under)
 
 #Summary stats
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
-summary(smallungulate.day.under)
-summary(smallungulate.day.under.exp)
-plot(smallungulate.day.under)
-plot(smallungulate.day.under.exp)
+summary(bigcarnivore.day.under)
+summary(bigcarnivore.day.under.exp)
+plot(bigcarnivore.day.under)
+plot(bigcarnivore.day.under.exp)
 ```
 ## Jumpout
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.day.jump$Location2<-as.factor(smallcarnivores.day.jump$Location2)
-smallungulates.day.jump$daynight<-as.factor(smallcarnivores.day.jump$daynight)
+bigcarnivores.day.jump$Location2<-as.factor(bigcarnivores.day.jump$Location2)
+bigcarnivores.day.jump$daynight<-as.factor(bigcarnivores.day.jump$daynight)
 
-smallungulate.day.jump <- MCMCglmm(Total ~
+bigcarnivore.day.jump <- MCMCglmm(Total ~
                                       daynight + Location2 +
                                       daynight.human,
                                     random = ~ average.effort ,
                                     prior = prior, nitt=1003000, burnin=100000, thin=500,
                                     verbose = FALSE,
                                     family = "poisson",
-                                    data = smallungulates.day.jump)
+                                    data = bigcarnivores.day.jump)
 
 
-smallungulate.day.jump.exp <- MCMCglmm(Total ~
+bigcarnivore.day.jump.exp <- MCMCglmm(Total ~
                                           daynight + Location2 +
                                           daynight.human,
                                         random = ~ average.effort ,
                                         prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                         verbose = FALSE,
                                         family = "poisson",
-                                        data = smallungulates.day.jump)
+                                        data = bigcarnivores.day.jump)
 
 
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
-summary(smallungulate.day.jump)
-summary(smallungulate.day.jump.exp)
-plot(smallungulate.day.jump)
-plot(smallungulate.day.jump.exp)
+summary(bigcarnivore.day.jump)
+summary(bigcarnivore.day.jump.exp)
+plot(bigcarnivore.day.jump)
+plot(bigcarnivore.day.jump.exp)
 ```
-# Small seasonal ungulates
+# big seasonal carnivores
 ## Underpass
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.season.under$Location2<-as.factor(smallcarnivores.season.under$Location2)
-smallungulates.season.under$Season<-as.factor(smallcarnivores.season.under$Season)
+bigcarnivores.season.under$Location2<-as.factor(bigcarnivores.season.under$Location2)
+bigcarnivores.season.under$Season<-as.factor(bigcarnivores.season.under$Season)
 
 
-smallungulate.season.under <- MCMCglmm(Total ~
+bigcarnivore.season.under <- MCMCglmm(Total ~
                                       Season,
                                     random = ~ average.effort ,
                                     prior = prior, nitt=1003000, burnin=100000, thin=500,
                                     verbose = FALSE,
                                     family = "poisson",
-                                    data = smallungulates.season.under)
+                                    data = bigcarnivores.season.under)
 
 
-smallungulate.season.under.exp <- MCMCglmm(Total ~
+bigcarnivore.season.under.exp <- MCMCglmm(Total ~
                                           Season,
                                         random = ~ average.effort ,
                                         prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                         verbose = FALSE,
                                         family = "poisson",
-                                        data = smallungulates.season.under)
+                                        data = bigcarnivores.season.under)
 
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
 par(mar = rep(2, 4))
-summary(smallungulate.season.under)
-summary(smallungulate.season.under.exp)
-plot(smallungulate.season.under)
-plot(smallungulate.season.under.exp)
+summary(bigcarnivore.season.under)
+summary(bigcarnivore.season.under.exp)
+plot(bigcarnivore.season.under)
+plot(bigcarnivore.season.under.exp)
 ```
 ## Jumpouts
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.season.jump$Location2<-as.factor(smallcarnivores.season.jump$Location2)
-smallungulates.season.jump$Season<-as.factor(smallcarnivores.season.jump$Season)
+bigcarnivores.season.jump$Location2<-as.factor(bigcarnivores.season.jump$Location2)
+bigcarnivores.season.jump$Season<-as.factor(bigcarnivores.season.jump$Season)
 
 
-smallungulate.season.jump <- MCMCglmm(Total ~
+bigcarnivore.season.jump <- MCMCglmm(Total ~
                                          Season + Location2 +
                                          seasonal.human,
                                        random = ~ average.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = FALSE,
                                        family = "poisson",
-                                       data = smallungulates.season.jump)
+                                       data = bigcarnivores.season.jump)
 
 
-smallungulate.season.jump.exp <- MCMCglmm(Total ~
+bigcarnivore.season.jump.exp <- MCMCglmm(Total ~
                                              Season + Location2 +
                                              seasonal.human,
                                            random = ~ average.effort ,
                                            prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                            verbose = FALSE,
                                            family = "poisson",
-                                           data = smallungulates.season.jump)
+                                           data = bigcarnivores.season.jump)
 
 
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
-summary(smallungulate.season.jump)
-summary(smallungulate.season.jump.exp)
-plot(smallungulate.season.jump)
-plot(smallungulate.season.jump.exp)
+summary(bigcarnivore.season.jump)
+summary(bigcarnivore.season.jump.exp)
+plot(bigcarnivore.season.jump)
+plot(bigcarnivore.season.jump.exp)
 ```
-# Small annual ungulates
+# big annual carnivores
 ## Underpass
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.annual.under$Location2<-as.factor(smallcarnivores.annual.under$Location2)
+bigcarnivores.annual.under$Location2<-as.factor(bigcarnivores.annual.under$Location2)
 
-smallungulate.annual.under <- MCMCglmm(Total ~
+bigcarnivore.annual.under <- MCMCglmm(Total ~
                                          Year + Location2 +
                                          annual.human,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = FALSE,
                                        family = "poisson",
-                                       data = smallungulates.annual.under)
+                                       data = bigcarnivores.annual.under)
 
 
-smallungulate.annual.under.exp <- MCMCglmm(Total ~
+bigcarnivore.annual.under.exp <- MCMCglmm(Total ~
                                               Year + Location2 +
                                              annual.human,
                                            random = ~ annual.effort ,
                                            prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                            verbose = FALSE,
                                            family = "poisson",
-                                           data = smallungulates.annual.under)
+                                           data = bigcarnivores.annual.under)
 
 
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
 par(mar = rep(2, 4))
-summary(smallungulate.annual.under)
-summary(smallungulate.annual.under.exp)
-plot(smallungulate.annual.under)
-plot(smallungulate.annual.under.exp)
+summary(bigcarnivore.annual.under)
+summary(bigcarnivore.annual.under.exp)
+plot(bigcarnivore.annual.under)
+plot(bigcarnivore.annual.under.exp)
 ```
 ## Jumpouts
 ```{r, eval=TRUE, echo=FALSE}
-smallungulates.annual.jump$Location2<-as.factor(smallcarnivores.annual.jump$Location2)
+bigcarnivores.annual.jump$Location2<-as.factor(bigcarnivores.annual.jump$Location2)
 
-smallungulate.annual.jump <- MCMCglmm(Total ~
+bigcarnivore.annual.jump <- MCMCglmm(Total ~
                                          Year + Location2 +
                                          annual.human,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = FALSE,
                                        family = "poisson",
-                                       data = smallungulates.annual.jump)
+                                       data = bigcarnivores.annual.jump)
 
 
-smallungulate.annual.jump.exp <- MCMCglmm(Total ~
+bigcarnivore.annual.jump.exp <- MCMCglmm(Total ~
                                              Year + Location2 +
                                              annual.human,
                                            random = ~ annual.effort ,
                                            prior = prioexp, nitt=1003000, burnin=100000, thin=500,
                                            verbose = FALSE,
                                            family = "poisson",
-                                           data = smallungulates.annual.jump)
+                                           data = bigcarnivores.annual.jump)
 
 
 ```
 ## model summary and plots of IG prior and expanded prior respectively
 ```{r, eval=TRUE, echo=FALSE}
 par(mar = rep(2, 4))
-summary(smallungulate.annual.jump)
-summary(smallungulate.annual.jump.exp)
-plot(smallungulate.annual.jump)
-plot(smallungulate.annual.jump.exp)
+summary(bigcarnivore.annual.jump)
+summary(bigcarnivore.annual.jump.exp)
+plot(bigcarnivore.annual.jump)
+plot(bigcarnivore.annual.jump.exp)
 ```
