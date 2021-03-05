@@ -13,6 +13,7 @@ setwd("/Users/hannahedwards/Documents/Alberta Parks/Crossing-structures/data/")
 
 #----------------Load libraries----------------------------
 library(MCMCglmm)
+library(HDInterval)
 
 #----------------Load datasets----------------------------
 
@@ -200,6 +201,19 @@ HPDinterval(bigungulate.season.under$VCV)
 
 vif.MCMCglmm(bigungulate.season.under)
 vif.MCMCglmm(bigungulate.season.under.exp)
+
+#Calc levels for season
+
+Winter<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonWinter"])
+Summer<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSummer"])
+Spring<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSpring"])
+#Autumn<-mean(bigungulate.season.under$Sol[,"(Intercept)"]) ? #If there are other fixed effects I subtract them?
+logitT6<-cbind(Winter,Spring,Summer)
+T6 <- plogis(logitT6)
+
+hdi_T6 <- round(hdi(plogis(logitT6), credMass = 0.95), 2)
+
+backtransformed <- round(data.frame(mean=round(colMeans(T6), 2), lower=t(hdi_T6)[, 1], upper=t(hdi_T6)[, 2]), 2)
 
 #jumpouts
 bigungulates.season.jump$Location2<-as.factor(bigungulates.season.jump$Location2)
