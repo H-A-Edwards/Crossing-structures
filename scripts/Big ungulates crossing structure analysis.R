@@ -204,14 +204,16 @@ vif.MCMCglmm(bigungulate.season.under.exp)
 
 #Calc levels for season
 
-Winter<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonWinter"])
-Summer<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSummer"])
-Spring<-mean(bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSpring"])
-#Autumn<-mean(bigungulate.season.under$Sol[,"(Intercept)"]) ? #If there are other fixed effects I subtract them?
-logitT6<-cbind(Winter,Spring,Summer)
-T6 <- plogis(logitT6)
+Winter<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonWinter"]
+Summer<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSummer"]
+Spring<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSpring"]
+Autumn<-bigungulate.season.under$Sol[,"(Intercept)"] #If there are other fixed effects I subtract them? # what do you mean?
+logT6<-cbind(Autumn,Winter,Spring,Summer) # maybe better to oder cronologically
+T6 <- exp(logT6) # you're running a  family = "poisson", so to backtransform you need the exp.
+# alternatively you can leave in the log scale, but it's more common to backtransform
 
-hdi_T6 <- round(hdi(plogis(logitT6), credMass = 0.95), 2)
+ 
+hdi_T6 <- round(hdi(T6, credMass = 0.95), 2)
 
 backtransformed <- round(data.frame(mean=round(colMeans(T6), 2), lower=t(hdi_T6)[, 1], upper=t(hdi_T6)[, 2]), 2)
 
