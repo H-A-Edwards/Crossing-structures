@@ -208,14 +208,17 @@ Winter<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$So
 Summer<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSummer"]
 Spring<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSpring"]
 Autumn<-bigungulate.season.under$Sol[,"(Intercept)"] #If there are other fixed effects I subtract them? # what do you mean?
+
 logT6<-cbind(Autumn,Winter,Spring,Summer) # maybe better to oder cronologically
-T6 <- exp(logT6) # you're running a  family = "poisson", so to backtransform you need the exp.
-# alternatively you can leave in the log scale, but it's more common to backtransform
 
- 
-hdi_T6 <- round(hdi(T6, credMass = 0.95), 2)
-
-backtransformed <- round(data.frame(mean=round(colMeans(T6), 2), lower=t(hdi_T6)[, 1], upper=t(hdi_T6)[, 2]), 2)
+# you're running a  family = "poisson", so to backtransform you need the exp.
+data_scale <- round(data.frame(mean=round(exp(colMeans(logT6)), 2), 
+                                    lower=t(exp(hdi(logT6, credMass = 0.95)))[, 1], 
+                                    upper=t(exp(hdi(logT6, credMass = 0.95)))[, 2]), 2)
+# alternatively you can leave the results in the log scale
+log_scale <- round(data.frame(mean=round(colMeans(logT6), 2), 
+                                        lower=t(hdi(logT6, credMass = 0.95))[, 1], 
+                                        upper=t(hdi(logT6, credMass = 0.95))[, 2]), 2)
 
 #jumpouts
 bigungulates.season.jump$Location2<-as.factor(bigungulates.season.jump$Location2)
