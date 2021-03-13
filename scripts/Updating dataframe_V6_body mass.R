@@ -355,22 +355,11 @@ write.csv(newdata_effort, "newdata_bodymass.csv", row.names=FALSE)
 # Read in new dataframe
 newdata = read.csv("newdata_bodymass.csv")
 
-# Create subsets with humans included
-Bigungulates_humans = subset(newdata, newdata$Species.body.mass == "Big ungulate")
-Smallungulates_humans = subset(newdata, newdata$Species.body.mass != "Small carnivore")
-Bigcarnivores_humans = subset(newdata, newdata$Species.body.mass != "Big carnivore")
-Smallcarnivores_humans = subset(newdata, newdata$Species.body.mass != "Small carnivore")
-
-# Since humans are accounted for in Human.total.x, omit them from Total
-Bigungulates_humans$Total[Bigungulates_humans$Species.body.mass == "Human"] = "0"
-Smallungulates_humans$Total[Smallungulates_humans$Species.body.mass == "Human"] = "0"
-Bigcarnivores_humans$Total[Bigcarnivores_humans$Species.body.mass == "Human"] = "0"
-Smallcarnivores_humans$Total[Smallcarnivores_humans$Species.body.mass == "Human"] = "0"
-
-Bigungulates_humans$Total = as.numeric(Bigungulates_humans$Total)
-Smallungulates_humans$Total = as.numeric(Smallungulates_humans$Total)
-Bigcarnivores_humans$Total = as.numeric(Bigcarnivores_humans$Total)
-Smallcarnivores_humans$Total = as.numeric(Smallcarnivores_humans$Total)
+# Create subsets big/small ung/carn
+Bigungulates = subset(newdata, newdata$Species.body.mass == "Big ungulate")
+Smallungulates = subset(newdata, newdata$Species.body.mass == "Small ungulate")
+Bigcarnivores = subset(newdata, newdata$Species.body.mass == "Big carnivore")
+Smallcarnivores = subset(newdata, newdata$Species.body.mass == "Small carnivore")
 
 # Hourly big ungulates-use average sampling effort
 Bigungulates.hourly <- aggregate(Total ~
@@ -388,7 +377,7 @@ Smallungulates.hourly <- aggregate(Total ~
                                 daynight + Location2 +
                                 Underpass.type+average.effort + 
                                 daynight.traffic+daynight.human,
-                                Smallungulates_humans, sum)
+                                Smallungulates, sum)
 
 #Smallungulates.hourly$HourEnding = as.numeric(Smallungulates.hourly$HourEnding)
 #Smallungulates.hourly$Hour.sq = (Smallungulates.hourly$HourEnding)^2
@@ -399,7 +388,7 @@ Bigcarnivores.hourly = aggregate(Total ~
                                 daynight + Location2 +
                                 Underpass.type+average.effort + 
                                 daynight.traffic+daynight.human,
-                                Bigcarnivores_humans, sum)
+                                Bigcarnivores, sum)
 
 #Bigcarnivores.hourly$HourEnding = as.numeric(Bigcarnivores.hourly$HourEnding)
 #Bigcarnivores.hourly$Hour.sq = (Bigcarnivores.hourly$HourEnding)^2
@@ -410,7 +399,7 @@ Smallcarnivores.hourly = aggregate(Total ~
                                 daynight + Location2 +
                                 Underpass.type+average.effort + 
                                daynight.traffic+daynight.human,
-                                Smallcarnivores_humans, sum)
+                                Smallcarnivores, sum)
 
 #Smallcarnivores.hourly$HourEnding = as.numeric(Smallcarnivores.hourly$HourEnding)
 #Smallcarnivores.hourly$Hour.sq = (Smallcarnivores.hourly$HourEnding)^2
@@ -422,7 +411,7 @@ Bigungulates.monthly = aggregate(Total ~
                                 Season + Location2 +
                                 Underpass.type+average.effort + 
                                 seasonal.traffic+seasonal.human,
-                                Bigungulates_humans, sum)
+                                Bigungulates, sum)
 
 #Bigungulates.monthly$Month = as.numeric(Bigungulates.monthly$Month)
 #Bigungulates.monthly$Month.sq = (Bigungulates.monthly$Month)^2
@@ -433,7 +422,7 @@ Smallungulates.monthly = aggregate(Total ~
                                 Season + Location2 +
                                 Underpass.type+average.effort + 
                                   seasonal.traffic+seasonal.human,
-                                Smallungulates_humans, sum)
+                                Smallungulates, sum)
 
 #Smallungulates.monthly$Month = as.numeric(Smallungulates.monthly$Month)
 #Smallungulates.monthly$Month.sq = (Smallungulates.monthly$Month)^2
@@ -444,7 +433,7 @@ Bigcarnivores.monthly = aggregate(Total ~
                                  Season + Location2 +
                                  Underpass.type+average.effort + 
                                 seasonal.traffic+seasonal.human,
-                                 Bigcarnivores_humans, sum)
+                                 Bigcarnivores, sum)
 
 #Bigcarnivores.monthly$Month = as.numeric(Bigcarnivores.monthly$Month)
 #Bigcarnivores.monthly$Month.sq = (Bigcarnivores.monthly$Month)^2
@@ -455,7 +444,7 @@ Smallcarnivores.monthly = aggregate(Total ~
                                  Season + Location2 +
                                  Underpass.type+average.effort + 
                                  seasonal.traffic+seasonal.human,
-                                 Smallcarnivores_humans, sum)
+                                 Smallcarnivores, sum)
 
 #Smallcarnivores.monthly$Month = as.numeric(Smallcarnivores.monthly$Month)
 #Smallcarnivores.monthly$Month.sq = (Smallcarnivores.monthly$Month)^2
@@ -465,27 +454,27 @@ write.csv(Smallcarnivores.monthly, "Smallcarnivores seasonal.csv")
 Bigungulates.annual = aggregate(Total ~
                                 Location + Year + Location2 + Underpass.type + annual.effort +
                                Agecentred + annual.traffic+ annual.human,
-                               Bigungulates_humans, sum)
+                               Bigungulates, sum)
 write.csv(Bigungulates.annual, "Bigungulates annual.csv")
 
 # Annual small ungulates-use yearly sampling effort
 Smallungulates.annual = aggregate(Total ~
                                Location + Year + Location2 + Underpass.type + annual.effort +
                                Agecentred + annual.traffic+ annual.human,
-                               Smallungulates_humans, sum)
+                               Smallungulates, sum)
 write.csv(Smallungulates.annual, "Smallungulates annual.csv")
 
 # Annual big carnivores-use yearly sampling effort
 Bigcarnivores.annual = aggregate(Total ~
                                  Location + Year + Location2 + Underpass.type + annual.effort 
                                +Agecentred + annual.traffic+ annual.human,
-                               Bigcarnivores_humans, sum)
+                               Bigcarnivores, sum)
 write.csv(Bigcarnivores.annual, "Bigcarnivores annual.csv")
 
 # Annual small carnivores-use yearly sampling effort
 Smallcarnivores.annual = aggregate(Total ~
                                 Location + Year + Location2 + Underpass.type + annual.effort 
                               +Agecentred + annual.traffic+ annual.human,
-                              Smallcarnivores_humans, sum)
+                              Smallcarnivores, sum)
 write.csv(Smallcarnivores.annual, "Smallcarnivores annual.csv")
 

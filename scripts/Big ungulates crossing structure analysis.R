@@ -14,6 +14,7 @@ setwd("/Users/hannahedwards/Documents/Alberta Parks/Crossing-structures/data/")
 #----------------Load libraries----------------------------
 library(MCMCglmm)
 library(HDInterval)
+library(forestplot)
 
 #----------------Load datasets----------------------------
 
@@ -45,6 +46,10 @@ prioexp<- list(R = list(V = 1, nu=0.002), #residuals prior
 #Underpass
 bigungulates.day.under$Location2<-as.factor(bigungulates.day.under$Location2)
 bigungulates.day.under$daynight<-as.factor(bigungulates.day.under$daynight)
+
+contrasts(bigungulates.day.under$daynight)
+bigungulates.day.under$daynight <- relevel(bigungulates.day.under$daynight, ref=2)
+contrasts(bigungulates.day.under$daynight)
 
 #IG prior preferred
 bigungulate.day.under <- MCMCglmm(Total ~
@@ -108,6 +113,10 @@ vif.MCMCglmm(bigungulate.day.under.exp)
 bigungulates.day.jump$Location2<-as.factor(bigungulates.day.jump$Location2)
 bigungulates.day.jump$daynight<-as.factor(bigungulates.day.jump$daynight)
 
+contrasts(bigungulates.day.jump$daynight)
+bigungulates.day.jump$daynight <- relevel(bigungulates.day.jump$daynight, ref=2)
+contrasts(bigungulates.day.jump$daynight)
+
 #IG prior preferred
 bigungulate.day.jump <- MCMCglmm(Total ~
                                       daynight + Location2 +
@@ -159,6 +168,10 @@ vif.MCMCglmm(bigungulate.day.jump.exp)
 bigungulates.season.under$Location2<-as.factor(bigungulates.season.under$Location2)
 bigungulates.season.under$Season<-as.factor(bigungulates.season.under$Season)
 
+contrasts(bigungulates.season.under$Season)
+bigungulates.season.under$Season <- relevel(bigungulates.season.under$Season, ref=3)
+contrasts(bigungulates.season.under$Season)
+
 #IG prior preferred
 bigungulate.season.under <- MCMCglmm(Total ~
                                          Season,
@@ -167,7 +180,6 @@ bigungulate.season.under <- MCMCglmm(Total ~
                                     verbose = TRUE,
                                     family = "poisson",
                                     data = bigungulates.season.under)
-
 
 #bigungulate.season.under.exp <- MCMCglmm(Total ~
  #                                         Season,
@@ -207,22 +219,49 @@ vif.MCMCglmm(bigungulate.season.under.exp)
 Winter<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonWinter"]
 Summer<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSummer"]
 Spring<-bigungulate.season.under$Sol[,"(Intercept)"]+bigungulate.season.under$Sol[,"SeasonSpring"]
-Autumn<-bigungulate.season.under$Sol[,"(Intercept)"] #If there are other fixed effects I subtract them? # what do you mean?
+Autumn<-bigungulate.season.under$Sol[,"(Intercept)"] #
 
-logT6<-cbind(Autumn,Winter,Spring,Summer) # maybe better to oder cronologically
+logT6<-cbind(Autumn,Winter,Spring,Summer) # maybe better to oder chronologically
 
 # you're running a  family = "poisson", so to backtransform you need the exp.
 data_scale <- round(data.frame(mean=round(exp(colMeans(logT6)), 2), 
                                     lower=t(exp(hdi(logT6, credMass = 0.95)))[, 1], 
                                     upper=t(exp(hdi(logT6, credMass = 0.95)))[, 2]), 2)
 # alternatively you can leave the results in the log scale
-log_scale <- round(data.frame(mean=round(colMeans(logT6), 2), 
-                                        lower=t(hdi(logT6, credMass = 0.95))[, 1], 
-                                        upper=t(hdi(logT6, credMass = 0.95))[, 2]), 2)
+#log_scale <- round(data.frame(mean=round(colMeans(logT6), 2), 
+ #                                       lower=t(hdi(logT6, credMass = 0.95))[, 1], 
+  #                                      upper=t(hdi(logT6, credMass = 0.95))[, 2]), 2)
 
+
+bigungulatedata_scale <- 
+  structure(list(
+    mean  = c(NA, data_scale$mean[1], data_scale$mean[2],data_scale$mean[3],data_scale$mean[4]), 
+    lower = c(NA, data_scale$lower[1], data_scale$lower[2],data_scale$lower[3],data_scale$lower[4]),
+    upper = c(NA, data_scale$upper[1], data_scale$upper[2],data_scale$upper[3],data_scale$upper[4])),
+    .Names = c("mean", "lower", "upper"), 
+    row.names = c(NA, -5L), 
+    class = "data.frame")
+
+tabletext <- cbind(c("Season", "Autumn", "Winter", "Spring", "Summer"))
+
+forestplot(tabletext, bigungulatedata_scale, new_page = TRUE,
+           is.summary = c(TRUE,rep(FALSE,4)),
+           title = "Underpass big ungulate count",
+           xlab= "Total ungulate count",
+           txt_gp = fpTxtGp(xlab  = gpar(cex = 1)),
+           xlog = TRUE, 
+           boxsize = 0.1,
+           col = fpColors(box = "royalblue",
+                          line = "darkblue"))
+           
+           
 #jumpouts
 bigungulates.season.jump$Location2<-as.factor(bigungulates.season.jump$Location2)
 bigungulates.season.jump$Season<-as.factor(bigungulates.season.jump$Season)
+
+contrasts(bigungulates.season.jump$Season)
+bigungulates.season.jump$Season <- relevel(bigungulates.season.jump$Season, ref=3)
+contrasts(bigungulates.season.jump$Season)
 
 #IG prior preferred
 bigungulate.season.jump <- MCMCglmm(Total ~
@@ -275,8 +314,7 @@ bigungulates.annual.under$Location2<-as.factor(bigungulates.annual.under$Locatio
 
 #IG prior preferred
 bigungulate.annual.under <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
@@ -323,8 +361,7 @@ bigungulates.annual.jump$Location2<-as.factor(bigungulates.annual.jump$Location2
 
 #IG prior preferred
 bigungulate.annual.jump <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,

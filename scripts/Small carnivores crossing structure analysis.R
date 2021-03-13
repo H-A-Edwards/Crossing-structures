@@ -46,6 +46,10 @@ prioexp<- list(R = list(V = 1, nu=0.002), #residuals prior
 smallcarnivores.day.under$Location2<-as.factor(smallcarnivores.day.under$Location2)
 smallcarnivores.day.under$daynight<-as.factor(smallcarnivores.day.under$daynight)
 
+contrasts(smallcarnivores.day.under$daynight)
+smallcarnivores.day.under$daynight <- relevel(smallcarnivores.day.under$daynight, ref=2)
+contrasts(smallcarnivores.day.under$daynight)
+
 #IG prior preferred
 smallcarnivore.day.under <- MCMCglmm(Total ~
                                       daynight,
@@ -108,6 +112,10 @@ vif.MCMCglmm(smallcarnivore.day.under.exp)
 smallcarnivores.day.jump$Location2<-as.factor(smallcarnivores.day.jump$Location2)
 smallcarnivores.day.jump$daynight<-as.factor(smallcarnivores.day.jump$daynight)
 
+contrasts(smallcarnivores.day.jump$daynight)
+smallcarnivores.day.jump$daynight <- relevel(smallcarnivores.day.jump$daynight, ref=2)
+contrasts(smallcarnivores.day.jump$daynight)
+
 #IG prior preferred
 smallcarnivore.day.jump <- MCMCglmm(Total ~
                                       daynight + Location2 +
@@ -158,6 +166,9 @@ vif.MCMCglmm(smallcarnivore.day.jump.exp)
 smallcarnivores.season.under$Location2<-as.factor(smallcarnivores.season.under$Location2)
 smallcarnivores.season.under$Season<-as.factor(smallcarnivores.season.under$Season)
 
+contrasts(smallcarnivores.season.under$Season)
+smallcarnivores.season.under$Season <- relevel(smallcarnivores.season.under$Season, ref=4)
+contrasts(smallcarnivores.season.under$Season)
 
 #IG prior preferred
 smallcarnivore.season.under <- MCMCglmm(Total ~
@@ -206,6 +217,9 @@ vif.MCMCglmm(smallcarnivore.season.under.exp)
 smallcarnivores.season.jump$Location2<-as.factor(smallcarnivores.season.jump$Location2)
 smallcarnivores.season.jump$Season<-as.factor(smallcarnivores.season.jump$Season)
 
+contrasts(smallcarnivores.season.jump$Season)
+smallcarnivores.season.jump$Season <- relevel(smallcarnivores.season.jump$Season, ref=3)
+contrasts(smallcarnivores.season.jump$Season)
 
 #IG prior preferred
 smallcarnivore.season.jump <- MCMCglmm(Total ~
@@ -258,8 +272,7 @@ smallcarnivores.annual.under$Location2<-as.factor(smallcarnivores.annual.under$L
 
 #IG prior preferred
 smallcarnivore.annual.under <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
@@ -306,8 +319,7 @@ smallcarnivores.annual.jump$Location2<-as.factor(smallcarnivores.annual.jump$Loc
 
 #IG preferred
 smallcarnivore.annual.jump <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,

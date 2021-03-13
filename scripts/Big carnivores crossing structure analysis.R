@@ -258,8 +258,7 @@ bigcarnivores.annual.under$Location2<-as.factor(bigcarnivores.annual.under$Locat
 
 #IG prior preferred
 bigcarnivore.annual.under <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
@@ -306,8 +305,7 @@ bigcarnivores.annual.jump$Location2<-as.factor(bigcarnivores.annual.jump$Locatio
 
 #IG prior preferred
 bigcarnivore.annual.jump <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,

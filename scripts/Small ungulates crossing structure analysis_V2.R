@@ -46,6 +46,10 @@ prioexp<- list(R = list(V = 1, nu=0.002), #residuals prior
 smallungulates.day.under$Location2<-as.factor(smallungulates.day.under$Location2)
 smallungulates.day.under$daynight<-as.factor(smallungulates.day.under$daynight)
 
+contrasts(smallungulates.day.under$daynight)
+smallungulates.day.under$daynight <- relevel(smallungulates.day.under$daynight, ref=2)
+contrasts(smallungulates.day.under$daynight)
+
 #IG prior preferred
 smallungulate.day.under <- MCMCglmm(Total ~
                                       daynight,
@@ -108,6 +112,10 @@ vif.MCMCglmm(smallungulate.day.under.exp)
 smallungulates.day.jump$Location2<-as.factor(smallungulates.day.jump$Location2)
 smallungulates.day.jump$daynight<-as.factor(smallungulates.day.jump$daynight)
 
+contrasts(smallungulates.day.jump$daynight)
+smallungulates.day.jump$daynight <- relevel(smallungulates.day.jump$daynight, ref=2)
+contrasts(smallungulates.day.jump$daynight)
+
 #IG prior preferred
 smallungulate.day.jump <- MCMCglmm(Total ~
                                       daynight + Location2 +
@@ -163,7 +171,6 @@ contrasts(smallungulates.season.under$Season)
 smallungulates.season.under$Season <- relevel(smallungulates.season.under$Season, ref=4)
 contrasts(smallungulates.season.under$Season)
 
-
 #IG prior preferred
 smallungulate.season.under <- MCMCglmm(Total ~
                                          Season,
@@ -209,7 +216,11 @@ vif.MCMCglmm(smallungulate.season.under.exp)
 
 #jumpouts
 smallungulates.season.jump$Location2<-as.factor(smallungulates.season.jump$Location2)
-smallungulates.season.jump$Season<-as.factor(smallungulatess.season.jump$Season)
+smallungulates.season.jump$Season<-as.factor(smallungulates.season.jump$Season)
+
+contrasts(smallungulates.season.jump$Season)
+smallungulates.season.jump$Season <- relevel(smallungulates.season.jump$Season, ref=3)
+contrasts(smallungulates.season.jump$Season)
 
 #IG prior preferred
 smallungulate.season.jump <- MCMCglmm(Total ~
@@ -262,8 +273,7 @@ smallungulates.annual.under$Location2<-as.factor(smallungulates.annual.under$Loc
 
 #IG prior preferred
 smallungulate.annual.under <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
@@ -307,11 +317,11 @@ vif.MCMCglmm(smallungulate.annual.under.exp)
 
 #Jumpouts
 smallungulates.annual.jump$Location2<-as.factor(smallungulates.annual.jump$Location2)
+smallungulates.annual.jump$annual.human<-as.factor(smallungulates.annual.jump$annual.human)
 
 #IG prior preferred
 smallungulate.annual.jump <- MCMCglmm(Total ~
-                                         Year + Location2 +
-                                         annual.human,
+                                         Year + Location2,
                                        random = ~ annual.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
