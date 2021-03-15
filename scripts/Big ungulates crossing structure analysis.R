@@ -119,8 +119,7 @@ contrasts(bigungulates.day.jump$daynight)
 
 #IG prior preferred
 bigungulate.day.jump <- MCMCglmm(Total ~
-                                      daynight + Location2 +
-                                      +daynight.human,
+                                      daynight + Location2,
                                     random = ~ average.effort ,
                                     prior = prior, nitt=1003000, burnin=100000, thin=500,
                                     verbose = TRUE,
@@ -265,8 +264,7 @@ contrasts(bigungulates.season.jump$Season)
 
 #IG prior preferred
 bigungulate.season.jump <- MCMCglmm(Total ~
-                                         Season + Location2 +
-                                         seasonal.human,
+                                         Season + Location2,
                                        random = ~ average.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,

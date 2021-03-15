@@ -118,8 +118,7 @@ contrasts(smallcarnivores.day.jump$daynight)
 
 #IG prior preferred
 smallcarnivore.day.jump <- MCMCglmm(Total ~
-                                      daynight + Location2 +
-                                      +daynight.human,
+                                      daynight + Location2,
                                     random = ~ average.effort ,
                                     prior = prior, nitt=1003000, burnin=100000, thin=500,
                                     verbose = TRUE,
@@ -223,8 +222,7 @@ contrasts(smallcarnivores.season.jump$Season)
 
 #IG prior preferred
 smallcarnivore.season.jump <- MCMCglmm(Total ~
-                                         Season + Location2 +
-                                         seasonal.human,
+                                         Season + Location2,
                                        random = ~ average.effort ,
                                        prior = prior, nitt=1003000, burnin=100000, thin=500,
                                        verbose = TRUE,
