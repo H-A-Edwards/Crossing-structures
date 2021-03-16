@@ -84,7 +84,7 @@ Pop1timedecomp=decompose(Pop1time)
 adf.test(Pop1time, alternative = "stationary")##large pvalue so non-stationary
 
 ###Tests for stationarity (mean variance and autocorrelation are constant over time):
-kpss.test(Pop1time)##p<0.05 suggest differencing is required-used in manuscript
+kpss.test(Pop1time, null="Trend")##p<0.05 suggest differencing is required-used in manuscript
 
 ###Tests
 Box.test(Pop1time,type="Ljung-Box")
