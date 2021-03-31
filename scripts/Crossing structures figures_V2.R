@@ -62,15 +62,12 @@ bigcarnivores.annual.under<-subset(bigcarnivores.annual, bigcarnivores.annual$Un
 bigcarnivores.annual.jump<-subset(bigcarnivores.annual, bigcarnivores.annual$Underpass.type != "Underpass")
 
 
-#----------------------------Figure 2-small ungulate counts
-smallungulates.day.under[smallungulates.day.under$daynight == "crep"] = "crepuscular"
-
-smallungulates.day.under$daynight<-revalue(smallungulates.day.under$daynight, c("crep"="crepuscular"))
+#----------------------------Figure 2-daily ungulates
 
 smallungdayund<-ggplot(data=smallungulates.day.under, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -79,13 +76,11 @@ smallungdayund<-ggplot(data=smallungulates.day.under, aes(x=daynight, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "a)")
 
-smallungulates.season.under$Season <- ordered(smallungulates.season.under$Season,
-                levels = c("Spring", "Summer", "Autumn", "Winter"))
 
-smallungseasonund<-ggplot(data=smallungulates.season.under, aes(x=Season, y=Total))+
+bigungdayund<-ggplot(data=bigungulates.day.under, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total large ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -94,10 +89,10 @@ smallungseasonund<-ggplot(data=smallungulates.season.under, aes(x=Season, y=Tota
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "b)")
 
-smallungannund<-ggplot(data=smallungulates.annual.under, aes(x=Year, y=Total))+
+smallungdayjump<-ggplot(data=smallungulates.day.jump, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -106,12 +101,10 @@ smallungannund<-ggplot(data=smallungulates.annual.under, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "c)")
 
-smallungulates.day.jump$daynight<-revalue(smallungulates.day.jump$daynight, c("crep"="crepuscular"))
-
-smallungdayjump<-ggplot(data=smallungulates.day.jump, aes(x=daynight, y=Total))+
+bigungdayjump<-ggplot(data=bigungulates.day.jump, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
+  ylab("Total large ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -120,47 +113,20 @@ smallungdayjump<-ggplot(data=smallungulates.day.jump, aes(x=daynight, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-smallungulates.season.jump$Season <- ordered(smallungulates.season.jump$Season,
-                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
+Fig2<-ggarrange(smallungdayund,smallungdayjump, bigungdayund, bigungdayjump, ncol = 2, 
+                nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig2, top="Daily ungulate count")
 
 
-smallungseasonjump<-ggplot(data=smallungulates.season.jump, aes(x=Season, y=Total))+
+#----------------------------Figure 3-seasonal ungulates
+
+smallungulates.season.under$Season <- ordered(smallungulates.season.under$Season,
+                levels = c("Spring", "Summer", "Autumn", "Winter"))
+
+smallungseasonund<-ggplot(data=smallungulates.season.under, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "e)")
-
-smallungannjump<-ggplot(data=smallungulates.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "f)")
-
-Fig2<-ggarrange(smallungdayund,smallungdayjump, smallungseasonund, 
-                smallungseasonjump,smallungannund, smallungannjump,ncol = 2, 
-                nrow = 3, common.legend=TRUE, legend="right")
-annotate_figure(Fig2, top="Small ungulate count")
-
-
-#----------------------------Figure 3-big ungulate counts
-bigungulates.day.under$daynight<-revalue(bigungulates.day.under$daynight, c("crep"="crepuscular"))
-
-bigungdayund<-ggplot(data=bigungulates.day.under, aes(x=daynight, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -170,12 +136,12 @@ bigungdayund<-ggplot(data=bigungulates.day.under, aes(x=daynight, y=Total))+
   labs(title = "a)")
 
 bigungulates.season.under$Season <- ordered(bigungulates.season.under$Season,
-                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
+                                            levels = c("Spring", "Summer", "Autumn", "Winter"))
 
 bigungseasonund<-ggplot(data=bigungulates.season.under, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total large ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -184,10 +150,14 @@ bigungseasonund<-ggplot(data=bigungulates.season.under, aes(x=Season, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "b)")
 
-bigungannund<-ggplot(data=bigungulates.annual.under, aes(x=Year, y=Total))+
+smallungulates.season.jump$Season <- ordered(smallungulates.season.jump$Season,
+                                             levels = c("Spring", "Summer", "Autumn", "Winter"))
+
+
+smallungseasonjump<-ggplot(data=smallungulates.season.jump, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -196,12 +166,14 @@ bigungannund<-ggplot(data=bigungulates.annual.under, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "c)")
 
-bigungulates.day.jump$daynight<-revalue(bigungulates.day.jump$daynight, c("crep"="crepuscular"))
+bigungulates.season.jump$Season <- ordered(bigungulates.season.jump$Season,
+                                           levels = c("Spring", "Summer", "Autumn", "Winter"))
 
-bigungdayjump<-ggplot(data=bigungulates.day.jump, aes(x=daynight, y=Total))+
+
+bigungseasonjump<-ggplot(data=bigungulates.season.jump, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
+  ylab("Total large ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -210,46 +182,19 @@ bigungdayjump<-ggplot(data=bigungulates.day.jump, aes(x=daynight, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-bigungulates.season.jump$Season <- ordered(bigungulates.season.jump$Season,
-                                            levels = c("Spring", "Summer", "Autumn", "Winter"))
+
+Fig3<-ggarrange(smallungseasonund, 
+                smallungseasonjump,bigungseasonund, bigungseasonjump,ncol = 2, 
+                nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig3, top="Seasonal ungulate count")
 
 
-bigungseasonjump<-ggplot(data=bigungulates.season.jump, aes(x=Season, y=Total))+
+#------------------------------Fig 4-annual ungulates
+
+smallungannund<-ggplot(data=smallungulates.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "e)")
-
-bigungannjump<-ggplot(data=bigungulates.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "f)")
-
-Fig3<-ggarrange(bigungdayund,bigungdayjump, bigungseasonund,
-                bigungseasonjump,bigungannund,bigungannjump,
-                ncol = 2, nrow = 3, common.legend=TRUE, legend="right")
-annotate_figure(Fig3, top="Large ungulate count")
-
-#----------------------------Figure 4-small carnivore counts
-smallcarnivores.day.under$daynight<-revalue(smallcarnivores.day.under$daynight, c("crep"="crepuscular"))
-
-smallcardayund<-ggplot(data=smallcarnivores.day.under, aes(x=daynight, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -258,13 +203,10 @@ smallcardayund<-ggplot(data=smallcarnivores.day.under, aes(x=daynight, y=Total))
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "a)")
 
-smallcarnivores.season.under$Season <- ordered(smallcarnivores.season.under$Season,
-                                            levels = c("Spring", "Summer", "Autumn", "Winter"))
-
-smallcarseasonund<-ggplot(data=smallcarnivores.season.under, aes(x=Season, y=Total))+
+bigungannund<-ggplot(data=bigungulates.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total large ungulate count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -273,10 +215,11 @@ smallcarseasonund<-ggplot(data=smallcarnivores.season.under, aes(x=Season, y=Tot
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "b)")
 
-smallcarannund<-ggplot(data=smallcarnivores.annual.under, aes(x=Year, y=Total))+
+
+smallungannjump<-ggplot(data=smallungulates.annual.jump, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -285,12 +228,10 @@ smallcarannund<-ggplot(data=smallcarnivores.annual.under, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "c)")
 
-smallcarnivores.day.jump$daynight<-revalue(smallcarnivores.day.jump$daynight, c("crep"="crepuscular"))
-
-smallcardayjump<-ggplot(data=smallcarnivores.day.jump, aes(x=daynight, y=Total))+
+bigungannjump<-ggplot(data=bigungulates.annual.jump, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
+  ylab("Total large ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -299,45 +240,61 @@ smallcardayjump<-ggplot(data=smallcarnivores.day.jump, aes(x=daynight, y=Total))
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-smallcarnivores.season.jump$Season <- ordered(smallcarnivores.season.jump$Season,
-                                               levels = c("Spring", "Summer", "Autumn", "Winter"))
+Fig4<-ggarrange(smallungannund,smallungannjump, bigungannund,bigungannjump,
+                ncol = 2, nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig4, top="Annual ungulate count")
 
-smallcarseasonjump<-ggplot(data=smallcarnivores.season.jump, aes(x=Season, y=Total))+
+#----------------------------Figure 5-daily carnivore
+smallcardayund<-ggplot(data=smallcarnivores.day.under, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
+  ylab("Total small carnivore count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
   theme(axis.line = element_line(color = 'black', size=0.4))+
   theme(axis.text=element_text(size=11))+
   theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "e)")
-
-smallcarannjump<-ggplot(data=smallcarnivores.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "f)")
-
-Fig4<-ggarrange(smallcardayund,smallcardayjump, smallcarseasonund,
-                smallcarseasonjump,smallcarannund,smallcarannjump,
-                ncol = 2, nrow = 3, common.legend=TRUE, legend="right")
-annotate_figure(Fig4, top="Small carnivore count")
-
-#----------------------------Figure 5-big carnivore counts
-bigcarnivores.day.under$daynight<-revalue(bigcarnivores.day.under$daynight, c("crep"="crepuscular"))
+  labs(title = "a)")
 
 bigcardayund<-ggplot(data=bigcarnivores.day.under, aes(x=daynight, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total large carnivore count at underpass")+
+  scale_fill_grey(start=0.8, end=0.2)+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black', size=0.4))+
+  theme(axis.text=element_text(size=11))+
+  theme(legend.title=element_blank(), legend.position="right")+
+  labs(title = "b)")
+
+smallcardayjump<-ggplot(data=smallcarnivores.day.jump, aes(x=daynight, y=Total))+
+  geom_bar(stat="identity")+
+  xlab("")+
+  ylab("Total small carnivore count at jumpout")+
+  scale_fill_grey(start=0.8, end=0.2)+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black', size=0.4))+
+  theme(axis.text=element_text(size=11))+
+  theme(legend.title=element_blank(), legend.position="right")+
+  labs(title = "c)")
+
+
+Fig5<-ggarrange(smallcardayund,smallcardayjump, bigcardayund,
+                ncol = 2, nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig5, top="Daily carnivore count")
+
+#----------------------------Figure 6-seasonal carnivore
+
+smallcarnivores.season.under$Season <- ordered(smallcarnivores.season.under$Season,
+                                            levels = c("Spring", "Summer", "Autumn", "Winter"))
+
+smallcarseasonund<-ggplot(data=smallcarnivores.season.under, aes(x=Season, y=Total))+
+  geom_bar(stat="identity")+
+  xlab("")+
+  ylab("Total small carnivore count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -347,13 +304,13 @@ bigcardayund<-ggplot(data=bigcarnivores.day.under, aes(x=daynight, y=Total))+
   labs(title = "a)")
 
 bigcarnivores.season.under$Season <- ordered(bigcarnivores.season.under$Season,
-                                               levels = c("Spring", "Summer", "Autumn", "Winter"))
+                                             levels = c("Spring", "Summer", "Autumn", "Winter"))
 
 
 bigcarseasonund<-ggplot(data=bigcarnivores.season.under, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total large carnivore count at underpass")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -362,10 +319,14 @@ bigcarseasonund<-ggplot(data=bigcarnivores.season.under, aes(x=Season, y=Total))
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "b)")
 
-bigcarannund<-ggplot(data=bigcarnivores.annual.under, aes(x=Year, y=Total))+
+
+smallcarnivores.season.jump$Season <- ordered(smallcarnivores.season.jump$Season,
+                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
+
+smallcarseasonjump<-ggplot(data=smallcarnivores.season.jump, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at underpass")+
+  ylab("Total small carnivore count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -375,10 +336,54 @@ bigcarannund<-ggplot(data=bigcarnivores.annual.under, aes(x=Year, y=Total))+
   labs(title = "c)")
 
 
+Fig6<-ggarrange(smallcarseasonund, smallcarseasonjump, bigcarseasonund,
+                ncol = 2, nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig6, top="Seasonal carnivore count")
+
+
+#-------------------------------Fig 7-Annual carnivore
+
+smallcarannund<-ggplot(data=smallcarnivores.annual.under, aes(x=Year, y=Total))+
+  geom_bar(stat="identity")+
+  xlab("")+
+  ylab("Total small carnivore count at underpass")+
+  scale_fill_grey(start=0.8, end=0.2)+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black', size=0.4))+
+  theme(axis.text=element_text(size=11))+
+  theme(legend.title=element_blank(), legend.position="right")+
+  labs(title = "a)")
+
+
+bigcarannund<-ggplot(data=bigcarnivores.annual.under, aes(x=Year, y=Total))+
+  geom_bar(stat="identity")+
+  xlab("")+
+  ylab("Total large carnivore count at underpass")+
+  scale_fill_grey(start=0.8, end=0.2)+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black', size=0.4))+
+  theme(axis.text=element_text(size=11))+
+  theme(legend.title=element_blank(), legend.position="right")+
+  labs(title = "b)")
+
+smallcarannjump<-ggplot(data=smallcarnivores.annual.jump, aes(x=Year, y=Total))+
+  geom_bar(stat="identity")+
+  xlab("")+
+  ylab("Total small carnivore count at jumpout")+
+  scale_fill_grey(start=0.8, end=0.2)+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black', size=0.4))+
+  theme(axis.text=element_text(size=11))+
+  theme(legend.title=element_blank(), legend.position="right")+
+  labs(title = "c)")
+
 bigcarannjump<-ggplot(data=bigcarnivores.annual.jump, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
-  ylab("Total count at jumpout")+
+  ylab("Total large carnivore count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -387,8 +392,7 @@ bigcarannjump<-ggplot(data=bigcarnivores.annual.jump, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-Fig5<-ggarrange(bigcardayund, bigcarseasonund,
-                bigcarannund,bigcarannjump,
-                ncol = 2, nrow = 3, common.legend=TRUE, legend="right")
-annotate_figure(Fig5, top="Large carnivore count")
+Fig7<-ggarrange(smallcarannund, smallcarannjump, bigcarannund,bigcarannjump,
+                ncol = 2, nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig7, top="Annual carnivore count")
 

@@ -1,18 +1,13 @@
-"","daynight","Location2","Underpass.type","average.effort","daynight.traffic","daynight.human","Total"
-"1","crep","Stewart Creek","Jumpout",10.0909090909091,763.823057835465,1,3
-"2","crep","Stewart Creek","Underpass",10.1818181818182,763.823057835465,3.83333333333333,27
-"3","night","Stewart Creek","Underpass",10.1818181818182,219.806605457791,4.5,126
-"4","crep","Wind Valley","Underpass",10.5833333333333,763.823057835465,4.55555555555556,41
-"5","night","Wind Valley","Underpass",10.5833333333333,219.806605457791,7.81818181818182,198
-"6","night","Stewart Creek","Jumpout",10.0909090909091,219.806605457791,8.22222222222222,41
-"7","crep","Dead Man's","Jumpout",9.4,763.823057835465,12.7272727272727,5
-"8","crep","Dead Man's","Jumpout",9.90909090909091,763.823057835465,12.7272727272727,9
-"9","night","Dead Man's","Jumpout",9.4,219.806605457791,24.2727272727273,24
-"10","night","Dead Man's","Jumpout",9.90909090909091,219.806605457791,24.2727272727273,32
-"11","night","Dead Man's","Jumpout",11.5555555555556,219.806605457791,24.2727272727273,5
-"12","day","Stewart Creek","Jumpout",10.0909090909091,1389.47627576055,25.9090909090909,14
-"13","day","Stewart Creek","Underpass",10.1818181818182,1389.47627576055,44.6363636363636,87
-"14","day","Wind Valley","Underpass",10.5833333333333,1389.47627576055,53.7272727272727,96
-"15","day","Dead Man's","Jumpout",9.4,1389.47627576055,156.272727272727,39
-"16","day","Dead Man's","Jumpout",9.90909090909091,1389.47627576055,156.272727272727,29
-"17","day","Dead Man's","Jumpout",11.5555555555556,1389.47627576055,156.272727272727,1
+"","daynight","Location2","Underpass.type","average.effort","Total"
+"1","day","Dead Man's","Jumpout",9.4,51
+"2","night","Dead Man's","Jumpout",9.4,17
+"3","day","Dead Man's","Jumpout",9.90909090909091,46
+"4","night","Dead Man's","Jumpout",9.90909090909091,24
+"5","day","Stewart Creek","Jumpout",10.0909090909091,18
+"6","night","Stewart Creek","Jumpout",10.0909090909091,40
+"7","day","Stewart Creek","Underpass",10.1818181818182,136
+"8","night","Stewart Creek","Underpass",10.1818181818182,104
+"9","day","Wind Valley","Underpass",10.5833333333333,139
+"10","night","Wind Valley","Underpass",10.5833333333333,196
+"11","day","Dead Man's","Jumpout",11.5555555555556,1
+"12","night","Dead Man's","Jumpout",11.5555555555556,5

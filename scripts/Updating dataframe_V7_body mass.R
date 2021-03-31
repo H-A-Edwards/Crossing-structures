@@ -28,6 +28,7 @@ library(dplyr)
 library(readxl)
 library(forcats)
 library(stringr)
+library(chron)
 
 # Camera data
 csdata = read_excel("CSData.xlsx")
@@ -67,14 +68,13 @@ sundata$Day.Month<- paste(Day3, Month3, sep="-")
 
 newdata <- left_join(newdata, sundata, by= c("Day.Month"))
 newdata<-subset(newdata, select = -c(Day.y, Month.y))#Drop unwanted cols from sundata
-newdata<-rename(newdata, "Month"="Month.x", "Day"="Day.x")#Drop unwanted cols from sundata
+newdata<-rename(newdata, c("Month"="Month.x", "Day"="Day.x"))#Drop unwanted cols from newdata
 
-newdata$daynight <- ifelse(newdata$TimeImage > newdata$Sunrise.hr.before & 
-                             newdata$TimeImage < newdata$Sunrise.hr.after, 'crep',
-                           ifelse(newdata$TimeImage > newdata$Sunset.hr.before & 
-                                    newdata$TimeImage < newdata$Sunset.hr.after, 'crep',
-                                  ifelse(newdata$TimeImage > newdata$Sunrise.hr.after &
-                                           newdata$TimeImage < newdata$Sunset.hr.before, 'day','night')))
+newdata$Sunrise <- chron(times=newdata$Sunrise)
+newdata$Sunset <- chron(times=newdata$Sunset)
+
+newdata$daynight <- ifelse(newdata$TimeImage > newdata$Sunrise &
+                             newdata$TimeImage < newdata$Sunset, 'day','night')
 
 #-------------------------Create season col----------------------------------------------
 
@@ -95,35 +95,36 @@ newdata$Season[newdata$Month == "10"] = "Autumn"
 newdata$Season[newdata$Month == "11"] = "Autumn"
 newdata$Season[newdata$Month == "12"] = "Winter"
 
-#-------------------------Average number of crep/day/night/ two way traffic-------------
-Day4<-str_pad(trafficdata$Day, 2, pad = "0")
-Month4<-str_pad(trafficdata$Month, 2, pad = "0")
-trafficdata$Day.Month<- paste(Day4, Month4, sep="-")
+#-------------------------Average number of crep/day/night two way traffic-------------
+#Not calculated since it was dropped from the model
+#Day4<-str_pad(trafficdata$Day, 2, pad = "0")
+#Month4<-str_pad(trafficdata$Month, 2, pad = "0")
+#trafficdata$Day.Month<- paste(Day4, Month4, sep="-")
 
-trafficdata$Time<-str_pad(trafficdata$Time, 2, pad = "0")
-trafficdata$Time<-paste(trafficdata$Time, trafficdata$Minutes, trafficdata$Seconds)
-trafficdata$Time<-gsub(" ","", trafficdata$Time)
+#trafficdata$Time<-str_pad(trafficdata$Time, 2, pad = "0")
+#trafficdata$Time<-paste(trafficdata$Time, trafficdata$Minutes, trafficdata$Seconds)
+#trafficdata$Time<-gsub(" ","", trafficdata$Time)
 
-hourly.traffic <- left_join(trafficdata, sundata, by= c("Day.Month"))
+#hourly.traffic <- left_join(trafficdata, sundata, by= c("Day.Month"))
 
-hourly.traffic$daynight <- ifelse(hourly.traffic$Time > hourly.traffic$Sunrise.hr.before & 
+#hourly.traffic$daynight <- ifelse(hourly.traffic$Time > hourly.traffic$Sunrise.hr.before & 
                                     hourly.traffic$Time < hourly.traffic$Sunrise.hr.after, 'crep',
                                   ifelse(hourly.traffic$Time > hourly.traffic$Sunset.hr.before & 
                                            hourly.traffic$Time < hourly.traffic$Sunset.hr.after, 'crep',
                                          ifelse(hourly.traffic$Time > hourly.traffic$Sunrise.hr.after &
                                                   hourly.traffic$Time < hourly.traffic$Sunset.hr.before, 'day','night')))
 
-hourly.traffic$daynight<-as.factor(hourly.traffic$daynight)
+#hourly.traffic$daynight<-as.factor(hourly.traffic$daynight)
 #Omit NA data for two way traffic on 15th March (only one datapoint)
-hourly.traffic<-hourly.traffic[!is.na(hourly.traffic$Two.way), ]
+#hourly.traffic<-hourly.traffic[!is.na(hourly.traffic$Two.way), ]
 
-daynight.traffic = (
-        hourly.traffic   %>%
-  group_by(daynight) %>%
- summarise(daynight.traffic = mean(Two.way))
-)
+#daynight.traffic = (
+#       hourly.traffic   %>%
+#  group_by(daynight) %>%
+# summarise(daynight.traffic = mean(Two.way))
+#)
 
-newdata = left_join(newdata, daynight.traffic, by = c("daynight"))
+#newdata = left_join(newdata, daynight.traffic, by = c("daynight"))
 
 #-------------------------Average number of seasonal two way traffic----------------------
 #Make seasons in traffic data
@@ -147,6 +148,7 @@ trafficdata$Season[trafficdata$Month == "12"] = "Winter"
 
 #Omit NA data for two way traffic on 15th March (only one datapoint)
 trafficdata<-trafficdata[!is.na(trafficdata$Two.way), ]
+trafficdata$Season<-as.factor(trafficdata$Season)
 
 seasonal.traffic = (
   trafficdata %>%
@@ -154,6 +156,7 @@ seasonal.traffic = (
     summarise(seasonal.traffic = mean(Two.way))
 )
 
+newdata$Season<-as.factor(newdata$Season)
 newdata = left_join(newdata, seasonal.traffic, by = c("Season"))
 
 #-------------------------Average number of annual two way traffic----------------------
@@ -383,8 +386,7 @@ Smallcarnivores = subset(newdata, newdata$Species.body.mass == "Small carnivore"
 # Hourly big ungulates-use average sampling effort
 Bigungulates.hourly <- aggregate(Total ~
                                 daynight + Location2 +
-                                Underpass.type+average.effort + 
-                                daynight.traffic+daynight.human,
+                                Underpass.type+average.effort,
                              Bigungulates, sum)
 
 #Bigungulates.hourly$HourEnding = as.numeric(Bigungulates.hourly$HourEnding)
@@ -394,8 +396,7 @@ write.csv(Bigungulates.hourly, "Bigungulates hourly daynight.csv")
 # Hourly small ungulates-use average sampling effort
 Smallungulates.hourly <- aggregate(Total ~
                                 daynight + Location2 +
-                                Underpass.type+average.effort + 
-                                daynight.traffic+daynight.human,
+                                Underpass.type+average.effort,
                                 Smallungulates, sum)
 
 #Smallungulates.hourly$HourEnding = as.numeric(Smallungulates.hourly$HourEnding)
@@ -405,8 +406,7 @@ write.csv(Smallungulates.hourly, "Smallungulates hourly daynight.csv")
 # Hourly big carnivores-use average sampling effort
 Bigcarnivores.hourly = aggregate(Total ~
                                 daynight + Location2 +
-                                Underpass.type+average.effort + 
-                                daynight.traffic+daynight.human,
+                                Underpass.type+average.effort,
                                 Bigcarnivores, sum)
 
 #Bigcarnivores.hourly$HourEnding = as.numeric(Bigcarnivores.hourly$HourEnding)
@@ -416,8 +416,7 @@ write.csv(Bigcarnivores.hourly, "Bigcarnivores hourly daynight.csv")
 # Hourly small carnivores-use average sampling effort
 Smallcarnivores.hourly = aggregate(Total ~
                                 daynight + Location2 +
-                                Underpass.type+average.effort + 
-                               daynight.traffic+daynight.human,
+                                Underpass.type+average.effort,
                                 Smallcarnivores, sum)
 
 #Smallcarnivores.hourly$HourEnding = as.numeric(Smallcarnivores.hourly$HourEnding)
@@ -472,28 +471,28 @@ write.csv(Smallcarnivores.monthly, "Smallcarnivores seasonal.csv")
 # Annual big ungulates-use yearly sampling effort
 Bigungulates.annual = aggregate(Total ~
                                 Location + Year + Location2 + Underpass.type + annual.effort +
-                               Agecentred + annual.traffic+ annual.human,
+                                annual.traffic+ annual.human,
                                Bigungulates, sum)
 write.csv(Bigungulates.annual, "Bigungulates annual.csv")
 
 # Annual small ungulates-use yearly sampling effort
 Smallungulates.annual = aggregate(Total ~
                                Location + Year + Location2 + Underpass.type + annual.effort +
-                               Agecentred + annual.traffic+ annual.human,
+                                annual.traffic+ annual.human,
                                Smallungulates, sum)
 write.csv(Smallungulates.annual, "Smallungulates annual.csv")
 
 # Annual big carnivores-use yearly sampling effort
 Bigcarnivores.annual = aggregate(Total ~
-                                 Location + Year + Location2 + Underpass.type + annual.effort 
-                               +Agecentred + annual.traffic+ annual.human,
+                                 Location + Year + Location2 + Underpass.type + annual.effort+
+                              annual.traffic+ annual.human,
                                Bigcarnivores, sum)
 write.csv(Bigcarnivores.annual, "Bigcarnivores annual.csv")
 
 # Annual small carnivores-use yearly sampling effort
 Smallcarnivores.annual = aggregate(Total ~
-                                Location + Year + Location2 + Underpass.type + annual.effort 
-                              +Agecentred + annual.traffic+ annual.human,
+                                Location + Year + Location2 + Underpass.type + annual.effort+ 
+                             annual.traffic+ annual.human,
                               Smallcarnivores, sum)
 write.csv(Smallcarnivores.annual, "Smallcarnivores annual.csv")
 
