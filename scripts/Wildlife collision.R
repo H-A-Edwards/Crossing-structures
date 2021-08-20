@@ -8,11 +8,11 @@ setwd("Documents/Alberta parks/Data")
 Collision<-read.csv("Collision_data_1991_2014.csv",header=T)
 
 ####Calculate Collision count each year
-library(dplyr)
-Collision2<-aggregate(Collision.count.x~Year, data=Collision, FUN='sum')
-Collision_final<-left_join(Collision,Collision2, by="Year")
-library(WriteXLS)
-WriteXLS(Collision_final, ExcelFileName="Collision_Final.xlsx")
+#library(dplyr)
+#Collision2<-aggregate(Collision.count.x~Year, data=Collision, FUN='sum')
+#Collision_final<-left_join(Collision,Collision2, by="Year")
+#library(WriteXLS)
+#WriteXLS(Collision_final, ExcelFileName="Collision_Final.xlsx")
 ####Or replace the original file
 
 
@@ -44,6 +44,10 @@ prior2<-list(R=list(V=1, nu=0.02),
 prioexp<- list(R = list(V = 1, nu=0.02), 
                G = list(G1 = list(V = 1,nu= 0.02,alpha.mu=0,alpha.V=1000)))
 
+#Change levels to look at differences in status 
+contrasts(Collision$Mitigationstatus)
+Collision$Mitigationstatus <- relevel(Collision$Mitigationstatus, ref=2)
+contrasts(Collision$Mitigationstatus)
 
 model<-MCMCglmm(Collisioncount~Mitigationstatus+Guild,
                 random=~Year,
@@ -52,8 +56,6 @@ model<-MCMCglmm(Collisioncount~Mitigationstatus+Guild,
                 family="poisson", 
                 data=Collision)
 
-summary(Collision$TimeSC)
-summary(Collision$Year)
 
 save(model, file ="Collision_Expprior.Rdata")
 load("Collision_IGprior.Rdata")
