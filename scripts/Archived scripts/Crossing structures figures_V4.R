@@ -1,4 +1,4 @@
-#Script to run produce figure 2-5 for the ms. Shows the total number of counts by 
+#Script to produce figure 2-4 for the ms. Shows the total number of counts by 
 #time of day, month and year for big/small ungualtes and carnivores.
 
 rm(list = ls())
@@ -61,8 +61,28 @@ bigcarnivores.season.under<-subset(bigcarnivores.season, bigcarnivores.season$Un
 bigcarnivores.annual.under<-subset(bigcarnivores.annual, bigcarnivores.annual$Underpass.type != "Jumpout")
 bigcarnivores.annual.jump<-subset(bigcarnivores.annual, bigcarnivores.annual$Underpass.type != "Underpass")
 
-#----------------------------Figure 3-seasonal ungulates
+#---------------------------Figure 2-collision figure
+# collision data
+collisions = read.csv("Collision_data_1991_2014.csv")
+str(collisions)
 
+ggplot(data=collisions, aes(x=Year, y=Collision.count.per.year))+
+  geom_line()+
+  geom_point()+
+  ylab("Annual wildlife-vehcile collision count")+
+  xlab("")+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black'))+
+  theme(text=element_text(size=10))+
+  theme(axis.text=element_text(size=10))+
+  geom_vline(xintercept=1999, linetype="dotted")+
+  geom_vline(xintercept=2004, linetype="dashed")
+
+
+#----------------------------Figure 3-seasonal/annual ungulates
+
+#Seasonal ungulates
 smallungulates.season.under$Season <- ordered(smallungulates.season.under$Season,
                 levels = c("Spring", "Summer", "Autumn", "Winter"))
 
@@ -81,9 +101,11 @@ smallungseasonund<-ggplot(data=smallungulates.season.under, aes(x=Season, y=Tota
 bigungulates.season.under$Season <- ordered(bigungulates.season.under$Season,
                                             levels = c("Spring", "Summer", "Autumn", "Winter"))
 
+#The scale is reduced to mirror the small ungulate counts
 bigungseasonund<-ggplot(data=bigungulates.season.under, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
+  ylim(0,7000)+
   ylab("Total large ungulate count")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
@@ -96,43 +118,7 @@ bigungseasonund<-ggplot(data=bigungulates.season.under, aes(x=Season, y=Total))+
 smallungulates.season.jump$Season <- ordered(smallungulates.season.jump$Season,
                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
 
-
-smallungseasonjump<-ggplot(data=smallungulates.season.jump, aes(x=Season, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total small ungulate count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "c)")
-
-bigungulates.season.jump$Season <- ordered(bigungulates.season.jump$Season,
-                                           levels = c("Spring", "Summer", "Autumn", "Winter"))
-
-
-bigungseasonjump<-ggplot(data=bigungulates.season.jump, aes(x=Season, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total large ungulate count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "d)")
-
-
-Fig3<-ggarrange(smallungseasonund, bigungseasonund, ncol = 2, 
-                nrow = 1, common.legend=TRUE, legend="right")
-annotate_figure(Fig3)
-
-
-#------------------------------Fig 4-annual ungulates
-
+#Annual ungulates
 smallungannund<-ggplot(data=smallungulates.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
@@ -143,37 +129,14 @@ smallungannund<-ggplot(data=smallungulates.annual.under, aes(x=Year, y=Total))+
   theme(axis.line = element_line(color = 'black', size=0.4))+
   theme(axis.text=element_text(size=11))+
   theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "a)")
+  labs(title = "d)")
 
+#The scale is reduced to mirror the small ungulate counts
 bigungannund<-ggplot(data=bigungulates.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
+  ylim(0, 2000)+
   ylab("Total large ungulate count")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "b)")
-
-
-smallungannjump<-ggplot(data=smallungulates.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total small ungulate count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "c)")
-
-bigungannjump<-ggplot(data=bigungulates.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total large ungulate count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -182,12 +145,13 @@ bigungannjump<-ggplot(data=bigungulates.annual.jump, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-Fig4<-ggarrange(smallungannund,bigungannund,
-                ncol = 2, nrow = 1, common.legend=TRUE, legend="right")
-annotate_figure(Fig4)
+Fig3<-ggarrange(smallungseasonund, bigungseasonund, smallungannund, bigungannund, ncol = 2, 
+                nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig3)
 
-#----------------------------Figure 5-seasonal carnivore
 
+#----------------------------Figure 4-seasonal/annaul carnivore
+#Seasonal counts
 smallcarnivores.season.under$Season <- ordered(smallcarnivores.season.under$Season,
                                             levels = c("Spring", "Summer", "Autumn", "Winter"))
 
@@ -206,10 +170,10 @@ smallcarseasonund<-ggplot(data=smallcarnivores.season.under, aes(x=Season, y=Tot
 bigcarnivores.season.under$Season <- ordered(bigcarnivores.season.under$Season,
                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
 
-
 bigcarseasonund<-ggplot(data=bigcarnivores.season.under, aes(x=Season, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
+  ylim(0,200)+
   ylab("Total large carnivore count")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
@@ -219,29 +183,7 @@ bigcarseasonund<-ggplot(data=bigcarnivores.season.under, aes(x=Season, y=Total))
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "b)")
 
-
-smallcarnivores.season.jump$Season <- ordered(smallcarnivores.season.jump$Season,
-                                              levels = c("Spring", "Summer", "Autumn", "Winter"))
-
-smallcarseasonjump<-ggplot(data=smallcarnivores.season.jump, aes(x=Season, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total small carnivore count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "c)")
-
-
-Fig5<-ggarrange(smallcarseasonund, bigcarseasonund,
-                ncol = 2, nrow = 1, common.legend=TRUE, legend="right")
-annotate_figure(Fig5)
-
-
-#-------------------------------Fig 6-Annual carnivore
+#annual carnivore
 
 smallcarannund<-ggplot(data=smallcarnivores.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
@@ -253,37 +195,14 @@ smallcarannund<-ggplot(data=smallcarnivores.annual.under, aes(x=Year, y=Total))+
   theme(axis.line = element_line(color = 'black', size=0.4))+
   theme(axis.text=element_text(size=11))+
   theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "a)")
+  labs(title = "c)")
 
 
 bigcarannund<-ggplot(data=bigcarnivores.annual.under, aes(x=Year, y=Total))+
   geom_bar(stat="identity")+
   xlab("")+
+  ylim(0,150)+
   ylab("Total large carnivore count")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "b)")
-
-smallcarannjump<-ggplot(data=smallcarnivores.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total small carnivore count at jumpout")+
-  scale_fill_grey(start=0.8, end=0.2)+
-  theme_bw() +
-  theme(panel.border = element_blank())+
-  theme(axis.line = element_line(color = 'black', size=0.4))+
-  theme(axis.text=element_text(size=11))+
-  theme(legend.title=element_blank(), legend.position="right")+
-  labs(title = "c)")
-
-bigcarannjump<-ggplot(data=bigcarnivores.annual.jump, aes(x=Year, y=Total))+
-  geom_bar(stat="identity")+
-  xlab("")+
-  ylab("Total large carnivore count at jumpout")+
   scale_fill_grey(start=0.8, end=0.2)+
   theme_bw() +
   theme(panel.border = element_blank())+
@@ -292,7 +211,51 @@ bigcarannjump<-ggplot(data=bigcarnivores.annual.jump, aes(x=Year, y=Total))+
   theme(legend.title=element_blank(), legend.position="right")+
   labs(title = "d)")
 
-Fig6<-ggarrange(smallcarannund, bigcarannund,
-                ncol = 2, nrow = 1, common.legend=TRUE, legend="right")
-annotate_figure(Fig6)
 
+Fig4<-ggarrange(smallcarseasonund, bigcarseasonund, smallcarannund, bigcarannund,
+                ncol = 2, nrow = 2, common.legend=TRUE, legend="right")
+annotate_figure(Fig4)
+
+#-------------------------Fig S1-prehunting pop counts
+
+####Plot the trend over time with species
+####data set
+Pop<-read.csv("Historical Pop Estimates Request_2001-2016.csv",header=T)
+
+Pop1<-aggregate(Estimate~Year +Taxon.ID, data=Pop, FUN='mean')
+Pop1$Ungulatetype[Pop1$Taxon.ID == "White-tailed Deer"] = "Small ungulate"
+Pop1$Ungulatetype[Pop1$Taxon.ID == "Moose"] = "Large ungulate"
+Pop1$Ungulatetype[Pop1$Taxon.ID == "Mule Deer"] = "Large ungulate"
+Pop1$Ungulatetype[Pop1$Taxon.ID == "Elk"] = "Large ungulate"
+Pop1<-rename(Pop1, c("Ungulatetype"="Ungulate.size"))
+
+plot2<-ggplot(Pop1)+
+  geom_line(aes(x=Year,y=Estimate,linetype=Ungulate.size, colour=Taxon.ID))+
+  ylab("Annual species count")+
+  xlab("Year")+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black'))+
+  theme(text=element_text(size=10))+
+  theme(axis.text=element_text(size=10))+
+  scale_color_manual(values=c('blue', 'red', 'green', 'purple', 'pink'))+
+  guides(colour = guide_legend(override.aes = list(linetype = 1, shape = 3)))
+plot2
+
+#---------------------------Fig S2-vehicle density fig
+# Annual average Daily traffic for traffic counter 5km E1 & 1A Canmore WJ
+trafficdata<- read.csv("5kmE1ACanmore_1983-2021.csv")
+#Cut off data at 2018 (when the data is collected in the study)
+trafficdata2<-trafficdata[which(trafficdata$Year<2018), ]
+
+ggplot(trafficdata2, aes(x=Year, y=X5.0.KM.E.1...1A.CANMORE.WJ))+
+  geom_point()+
+  geom_line(data=trafficdata2[!is.na(trafficdata2$X5.0.KM.E.1...1A.CANMORE.WJ),])+
+  ylab("Average annual daily traffic")+
+  xlab("Year")+
+  theme_bw() +
+  theme(panel.border = element_blank())+
+  theme(axis.line = element_line(color = 'black'))+
+  theme(text=element_text(size=10))+
+  theme(axis.text=element_text(size=10))
+  

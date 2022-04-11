@@ -160,7 +160,7 @@ bigcarnivores.season.under$Location2<-as.factor(bigcarnivores.season.under$Locat
 bigcarnivores.season.under$Season<-as.factor(bigcarnivores.season.under$Season)
 
 contrasts(bigcarnivores.season.under$Season)
-bigcarnivores.season.under$Season <- relevel(bigcarnivores.season.under$Season, ref=3)
+bigcarnivores.season.under$Season <- relevel(bigcarnivores.season.under$Season, ref=4)
 contrasts(bigcarnivores.season.under$Season)
 
 #IG prior preffered

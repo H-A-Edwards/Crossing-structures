@@ -168,7 +168,7 @@ bigungulates.season.under$Location2<-as.factor(bigungulates.season.under$Locatio
 bigungulates.season.under$Season<-as.factor(bigungulates.season.under$Season)
 
 contrasts(bigungulates.season.under$Season)
-bigungulates.season.under$Season <- relevel(bigungulates.season.under$Season, ref=3)
+bigungulates.season.under$Season <- relevel(bigungulates.season.under$Season, ref=4)
 contrasts(bigungulates.season.under$Season)
 
 #IG prior preferred
@@ -259,7 +259,7 @@ bigungulates.season.jump$Location2<-as.factor(bigungulates.season.jump$Location2
 bigungulates.season.jump$Season<-as.factor(bigungulates.season.jump$Season)
 
 contrasts(bigungulates.season.jump$Season)
-bigungulates.season.jump$Season <- relevel(bigungulates.season.jump$Season, ref=3)
+bigungulates.season.jump$Season <- relevel(bigungulates.season.jump$Season, ref=1)
 contrasts(bigungulates.season.jump$Season)
 
 #IG prior preferred
