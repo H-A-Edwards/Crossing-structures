@@ -3,17 +3,19 @@ Code written by Hannah Edwards with edits from Michela Busana (https://github.co
 
 Folder scripts:
 
-*  Combining data-logger egg data suvival analysis - Creates eggs.new dataset
-*  getData_for_jags_40min - Creates Egg_summary_survival_dailydata_40min datset
-*  run_inc_sims - Creates the simulation in Edwards et al. 2021
+*  Wildlife-vehicle collision analysis - Runs the wildlife-vehicle collisions analysis
+*  Large ungulate RMS analysis - Runs the temporal analysis for large ungulates 
+*  Small ungulate RMS analysis - Runs the temporal analysis for small ungulates
+*  Large carnivore RMS analysis - Runs the temporal analysis for large carnivores
+*  Small carnivore RMS analysis - Runs the temporal analysis for small carnivores
 
-Data files can be found:xxxxxx
+Data files can be found: To be added
 
 Additional details about the data collection can be found within the associated manuscript.
 
 License:
 
-Copyright 2022 Hannah A. Edwards and Wilder/Institute Calgary Zoo
+Copyright 2022 Hannah A. Edwards and Wilder Institute/Calgary Zoo
 
 The code in this repository is licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
