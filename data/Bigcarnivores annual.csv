@@ -1,40 +1,40 @@
-"","Location","Year","Location2","Underpass.type","annual.effort","annual.traffic","annual.human","Total"
-"1","Stewart South Jumpout",2010,"Stewart Creek","Jumpout",1,715.680479452055,32.7272727272727,4
-"2","Stewart South Jumpout",2012,"Stewart Creek","Jumpout",18,752.044057377049,32.7272727272727,1
-"3","Stewart South Jumpout",2014,"Stewart Creek","Jumpout",17,823.211529680365,32.7272727272727,1
-"4","Stewart South Jumpout",2015,"Stewart Creek","Jumpout",13,884.334589041096,32.7272727272727,3
-"5","Stewart South Jumpout",2016,"Stewart Creek","Jumpout",11,930.911657559198,32.7272727272727,2
-"6","Stewart South Jumpout",2017,"Stewart Creek","Jumpout",11,946.533736727937,32.7272727272727,1
-"7","Stewart Creek Underpass",2008,"Stewart Creek","Underpass",5,696.605988160291,50,37
-"8","Stewart Creek Underpass",2009,"Stewart Creek","Underpass",0,704.570662100457,50,37
-"9","Stewart Creek Underpass",2010,"Stewart Creek","Underpass",1,715.680479452055,50,23
-"10","Stewart Creek Underpass",2011,"Stewart Creek","Underpass",5,720.071917808219,50,25
-"11","Stewart Creek Underpass",2012,"Stewart Creek","Underpass",19,752.044057377049,50,25
-"12","Stewart Creek Underpass",2013,"Stewart Creek","Underpass",17,768.992922374429,50,23
-"13","Stewart Creek Underpass",2014,"Stewart Creek","Underpass",15,823.211529680365,50,23
-"14","stewart Creek Underpass",2015,"Stewart Creek","Underpass",0,884.334589041096,50,6
-"15","Stewart Creek Underpass",2015,"Stewart Creek","Underpass",13,884.334589041096,50,36
-"16","Stewart Creek Underpass",2016,"Stewart Creek","Underpass",12,930.911657559198,50,20
-"17","Stewart Creek Underpass",2017,"Stewart Creek","Underpass",12,946.533736727937,50,19
-"18","Stewart Creek Underpass",2018,"Stewart Creek","Underpass",12,950.874001996008,50,9
-"19","Wind Valley Underpass",2008,"Wind Valley","Underpass",5,696.605988160291,65.2727272727273,2
-"20","Wind Valley Underpass",2009,"Wind Valley","Underpass",4,704.570662100457,65.2727272727273,2
-"21","Wind Valley Underpass",2010,"Wind Valley","Underpass",1,715.680479452055,65.2727272727273,12
-"22","Wind Valley Underpass",2011,"Wind Valley","Underpass",13,720.071917808219,65.2727272727273,14
-"23","Wind Valley Underpass",2012,"Wind Valley","Underpass",19,752.044057377049,65.2727272727273,19
-"24","Wind Valley Underpass",2013,"Wind Valley","Underpass",17,768.992922374429,65.2727272727273,14
-"25","Wind Valley Underpass",2014,"Wind Valley","Underpass",18,823.211529680365,65.2727272727273,11
-"26","Wind Valley Underpass",2015,"Wind Valley","Underpass",13,884.334589041096,65.2727272727273,2
-"27","Wind Valley Underpass",2016,"Wind Valley","Underpass",12,930.911657559198,65.2727272727273,15
-"28","Wind Valley Underpass",2017,"Wind Valley","Underpass",12,946.533736727937,65.2727272727273,5
-"29","Wind Valley Underpass",2018,"Wind Valley","Underpass",12,950.874001996008,65.2727272727273,12
-"30","Deadmans Northeast Jumpout",2009,"Dead Man's","Jumpout",0,704.570662100457,193.272727272727,1
-"31","Deadmans South Jumpout",2011,"Dead Man's","Jumpout",3,720.071917808219,193.272727272727,1
-"32","Deadmans Northwest Jumpout",2012,"Dead Man's","Jumpout",18,752.044057377049,193.272727272727,1
-"33","Deadmans Northeast Jumpout",2014,"Dead Man's","Jumpout",9,823.211529680365,193.272727272727,3
-"34","Deadmans Northeast Jumpout",2015,"Dead Man's","Jumpout",13,884.334589041096,193.272727272727,2
-"35","Deadmans Northeast Jumpout",2016,"Dead Man's","Jumpout",11,930.911657559198,193.272727272727,1
-"36","Deadmans Northeast Jumpout",2017,"Dead Man's","Jumpout",11,946.533736727937,193.272727272727,2
-"37","Deadmans South Jumpout",2017,"Dead Man's","Jumpout",12,946.533736727937,193.272727272727,1
-"38","Deadmans Northeast Jumpout",2018,"Dead Man's","Jumpout",11,950.874001996008,193.272727272727,2
-"39","Deadmans Northwest Jumpout",2018,"Dead Man's","Jumpout",12,950.874001996008,193.272727272727,1
+Year,Location,Underpass.type,annual.effort,Total
+2010,Stewart Creek,Jumpout,1,4
+2012,Stewart Creek,Jumpout,18,1
+2014,Stewart Creek,Jumpout,17,1
+2015,Stewart Creek,Jumpout,13,3
+2016,Stewart Creek,Jumpout,11,2
+2017,Stewart Creek,Jumpout,11,1
+2008,Stewart Creek,Underpass,5,37
+2009,Stewart Creek,Underpass,0,37
+2010,Stewart Creek,Underpass,1,23
+2011,Stewart Creek,Underpass,5,25
+2012,Stewart Creek,Underpass,19,25
+2013,Stewart Creek,Underpass,17,23
+2014,Stewart Creek,Underpass,15,23
+2015,Stewart Creek,Underpass,0,6
+2015,Stewart Creek,Underpass,13,36
+2016,Stewart Creek,Underpass,12,20
+2017,Stewart Creek,Underpass,12,19
+2018,Stewart Creek,Underpass,12,9
+2008,Wind Valley,Underpass,5,2
+2009,Wind Valley,Underpass,4,2
+2010,Wind Valley,Underpass,1,12
+2011,Wind Valley,Underpass,13,14
+2012,Wind Valley,Underpass,19,19
+2013,Wind Valley,Underpass,17,14
+2014,Wind Valley,Underpass,18,11
+2015,Wind Valley,Underpass,13,2
+2016,Wind Valley,Underpass,12,15
+2017,Wind Valley,Underpass,12,5
+2018,Wind Valley,Underpass,12,12
+2009,Dead Man's,Jumpout,0,1
+2011,Dead Man's,Jumpout,3,1
+2012,Dead Man's,Jumpout,18,1
+2014,Dead Man's,Jumpout,9,3
+2015,Dead Man's,Jumpout,13,2
+2016,Dead Man's,Jumpout,11,1
+2017,Dead Man's,Jumpout,11,2
+2017,Dead Man's,Jumpout,12,1
+2018,Dead Man's,Jumpout,11,2
+2018,Dead Man's,Jumpout,12,1
