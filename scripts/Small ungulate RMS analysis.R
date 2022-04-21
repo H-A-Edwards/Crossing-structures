@@ -1,3 +1,5 @@
+#This code runs the model for hypothesis one described in Edwards et al.  
+
 #Script to run GLMM to look at the temporal variation in small ungulate use of underpasses and jumpouts.
 #We first separate out the season/annual counts (Total) by structure type and explore the influence
 #of season for the season counts and year and location for the annual counts. We account for sampling
