@@ -9,7 +9,11 @@ Folder scripts:
 *  Large carnivore RMS analysis - Runs the temporal analysis for large carnivores
 *  Small carnivore RMS analysis - Runs the temporal analysis for small carnivores
 
-Data files can be found: To be added
+*  Collision_date_1991_2014 - Data for the wildlife-vehicle collisions analysis
+*  Bigungulates seasonal/annual - Data for the temporal analysis for large ungulates 
+*  Smallungulates seasonal/annual - Data for the temporal analysis for small ungulates
+*  Bigcarnivores seasonal/annual - Data for the temporal analysis for large carnivores
+*  Smallcarnivores seasonal/annual - Data for the temporal analysis for small carnivores
 
 Additional details about the data collection can be found within the associated manuscript.
 
