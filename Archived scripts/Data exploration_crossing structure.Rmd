@@ -1,0 +1,620 @@
+---
+title: "Crossing structures data exploration"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r, echo=FALSE, include=FALSE}
+
+#Script to look at outliers, zeros and autocorrelation
+
+rm(list = ls())
+
+#-----------------Set working directory--------------------
+setwd("/Users/hannahedwards/Documents/Alberta Parks/Crossing-structures/data/")
+#setwd("/Users/eleonorelebeuf-taylor/Google Drive/Kananaskis crossing structures/")
+
+#----------------Load libraries.-------------
+library(MCMCglmm)
+library(lmtest)
+library(vioplot)
+library(zoo)
+library(circular)
+library(tinytex)
+library(regclass)
+library(knitr)
+library(xts)
+
+#-----------------Load data--------------------
+#ungulates.hourly <- read.csv("ungulates hourly.csv")
+#ungulates.monthly <- read.csv("ungulates monthly.csv")
+#ungulates.annual <- read.csv("ungulates annual.csv")
+
+#carnivores.hourly <- read.csv("carnivores hourly.csv")
+#carnivores.monthly <- read.csv("carnivores monthly.csv")
+#carnivores.annual <- read.csv("carnivores annual.csv")
+
+#Split by crossing structure type
+ungulates.hourly <- read.csv("ungulates hourly.csv")
+ungulates.hourly.under<-subset(ungulates.hourly, ungulates.hourly$Underpass.type != "Jumpout")
+ungulates.hourly.jump<-subset(ungulates.hourly, ungulates.hourly$Underpass.type != "Underpass")
+ungulates.monthly <- read.csv("ungulates monthly.csv")
+ungulates.monthly.under<-subset(ungulates.monthly, ungulates.monthly$Underpass.type != "Jumpout")
+ungulates.monthly.jump<-subset(ungulates.monthly, ungulates.monthly$Underpass.type != "Underpass")
+ungulates.annual <- read.csv("ungulates annual.csv")
+ungulates.annual.under<-subset(ungulates.annual, ungulates.annual$Underpass.type != "Jumpout")
+ungulates.annual.jump<-subset(ungulates.annual, ungulates.annual$Underpass.type != "Underpass")
+
+carnivores.hourly <- read.csv("carnivores hourly.csv")
+carnivores.hourly.under<-subset(carnivores.hourly, carnivores.hourly$Underpass.type != "Jumpout")
+carnivores.hourly.jump<-subset(carnivores.hourly, carnivores.hourly$Underpass.type != "Underpass")
+carnivores.monthly <- read.csv("carnivores monthly.csv")
+carnivores.monthly.under<-subset(carnivores.monthly, carnivores.monthly$Underpass.type != "Jumpout")
+carnivores.monthly.jump<-subset(carnivores.monthly, carnivores.monthly$Underpass.type != "Underpass")
+carnivores.annual <- read.csv("carnivores annual.csv")
+carnivores.annual.under<-subset(carnivores.annual, carnivores.annual$Underpass.type != "Jumpout")
+carnivores.annual.jump<-subset(carnivores.annual, carnivores.annual$Underpass.type != "Underpass")
+```
+
+#-------------------------------------------Look for outliers in guild count-----------------------------------------------
+
+```{r, eval=TRUE, echo=FALSE}
+summary(carnivores.annual$Total)
+hist(carnivores.annual$Total, xlab="Total annual carnivore count per crossing structure",
+      ylim=c(0,50), main="Figure 1")
+
+summary(carnivores.monthly$Total)
+hist(carnivores.monthly$Total, xlab="Total monthly carnivore count per crossing structure",
+     ylim=c(0,40), main="Figure 2")
+
+summary(carnivores.hourly$Total)
+hist(carnivores.hourly$Total, xlab="Total hourly carnivore count per crossing structure",
+     ylim=c(0,100), main="Figure 3")
+
+summary(ungulates.annual$Total)
+hist(ungulates.annual$Total, xlab="Total annual ungulate count per crossing structure",
+     ylim=c(0,50), main="Figure 4")
+
+summary(ungulates.monthly$Total)
+hist(ungulates.monthly$Total, xlab="Total monthly ungulate count per crossing structure",
+     ylim=c(0,50), main="Figure 5")
+
+summary(ungulates.hourly$Total)
+hist(ungulates.hourly$Total, xlab="Total hourly ungulate count per crossing structure",
+     ylim=c(0,100), main="Figure 6")
+
+```
+#----------------------------------------------Look for zeros in the data--------------------------------------------------
+
+#Proportion of zeros in the carnivore dataset
+```{r, eval=TRUE, echo=FALSE}
+Annual_carnivore_count_underpass<-sum(carnivores.annual.under$Total == 0)/length(carnivores.annual.under$Total) 
+#Annual carnivore count for jumpouts
+Annual_carnivore_count_jumpout<-sum(carnivores.annual.jump$Total == 0)/length(carnivores.annual.jump$Total)  
+#Monthly carnivore count for underpasses
+Monthly_carnivore_count_underpass<-sum(carnivores.monthly.under$Total == 0)/length(carnivores.monthly.under$Total)  
+#Monthly carnivore count for jumpouts
+Monthly_carnivore_count_jumpout<-sum(carnivores.monthly.jump$Total == 0)/length(carnivores.monthly.jump$Total) 
+#Hourly carnivore count for underpasses
+Hourly_carnivore_count_underpass<-sum(carnivores.hourly.under$Total == 0)/length(carnivores.hourly.under$Total)  
+#Hourly carnivore count for jumpouts
+Hourly_carnivore_count_jumpout<-sum(carnivores.hourly.jump$Total == 0)/length(carnivores.hourly.jump$Total)  
+
+Table1<-rbind(Annual_carnivore_count_jumpout, Annual_carnivore_count_underpass, Monthly_carnivore_count_jumpout, Monthly_carnivore_count_underpass, 
+      Hourly_carnivore_count_jumpout, Hourly_carnivore_count_underpass)
+Table1<-round(Table1, digits=2)
+colnames(Table1)[1]  <- "Proportion of zeros"
+kable(Table1, caption=".")
+
+```
+
+#Proportion of zeros in the ungulate dataset
+```{r, eval=TRUE, echo=FALSE}
+
+Annual_ungulate_count_underpass<-sum(ungulates.annual.under$Total == 0)/length(ungulates.annual.under$Total)
+#Annual ungulate count for jumpouts
+Annual_ungulate_count_jumpout<-sum(ungulates.annual.jump$Total == 0)/length(ungulates.annual.jump$Total) 
+#Monthly ungulate count for underpasses
+Monthly_ungulate_count_underpass<-sum(ungulates.monthly.under$Total == 0)/length(ungulates.monthly.under$Total) 
+#Monthly ungulate count for jumpouts
+Monthly_ungulate_count_jumpout<-sum(ungulates.monthly.jump$Total == 0)/length(ungulates.monthly.jump$Total)  
+#Hourly ungulate count for underpasses
+Hourly_ungulate_count_underpass<-sum(ungulates.hourly.under$Total == 0)/length(ungulates.hourly.under$Total)  
+#Hourly ungulate count for jumpouts
+Hourly_ungulate_count_jumpout<-sum(ungulates.hourly.jump$Total == 0)/length(ungulates.hourly.jump$Total)  
+
+Table2<-rbind(Annual_ungulate_count_jumpout, Annual_ungulate_count_underpass, Monthly_ungulate_count_jumpout, Monthly_ungulate_count_underpass, 
+      Hourly_ungulate_count_jumpout, Hourly_ungulate_count_underpass)
+Table2<-round(Table2, digits=2)
+colnames(Table2)[1]  <- "Proportion of zeros"
+kable(Table2, caption=".")
+
+```
+
+#--------------------------------------------Check for autocorrelation-----------------------------------------------------
+# Run Box-Pierce and Ljung-Box test on the raw data
+# Build a model of the mean (lm(count~1)) and run Durbin Watson test to test residuals
+
+#Annual carnivore count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+car.ann.count.jump<-carnivores.annual.jump$Total
+car.ann.count.jump.mod <- lm(car.ann.count.jump ~ 1)
+dwtest(car.ann.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(car.ann.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.ann.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.ann.count.jump, xlab="Total carnivore annual count for jumpouts",
+    main="Figure 7") #plot acf
+carnivores.annual.jump <- carnivores.annual.jump[order(carnivores.annual.jump$Year),] 
+plot(x=carnivores.annual.jump$Year, y=carnivores.annual.jump$Total,
+     xlab="Year", 
+     ylab="Total carnivore annual count for underpasses", type="l",
+     main="Figure 8")
+var(car.ann.count.jump)
+mean(car.ann.count.jump)
+```
+
+#Annual carnivore count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+car.ann.count.under<-carnivores.annual.under$Total
+car.ann.count.under.mod <- lm(car.ann.count.under ~ 1)
+dwtest(car.ann.count.under.mod) #not autocorrelated
+Box.test(car.ann.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.ann.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.ann.count.under, xlab="Total carnivore annual count for underpasses",
+    main="Figure 9")
+carnivores.annual.under <- carnivores.annual.under[order(carnivores.annual.under$Year),] 
+plot(x=carnivores.annual.under$Year, y=carnivores.annual.under$Total,
+     xlab="Year",
+     ylab="Total carnivore annual count for underpasses", type="l",
+     main="Figure 10")
+var(car.ann.count.under)
+mean(car.ann.count.under)
+```
+
+#Monthly carnivore count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+car.mon.count.jump<-carnivores.monthly.jump$Total
+car.mon.count.jump.mod <- lm(car.mon.count.jump ~ 1)
+dwtest(car.mon.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(car.mon.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.mon.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.mon.count.jump, xlab="Total carnivore monthly count for jumpouts",
+    main="Figure 11") #plot acf
+carnivores.monthly.jump <- carnivores.monthly.jump[order(carnivores.monthly.jump$Month),] 
+plot(x=carnivores.monthly.jump$Month, y=carnivores.monthly.jump$Total,
+     xlab="Month",
+     ylab="Total carnivore monthly count for jumpouts", type="l",
+     main="Figure 12")
+var(car.mon.count.jump)
+mean(car.mon.count.jump)
+```
+
+#Monthly carnivore count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+car.mon.count.under<-carnivores.monthly.under$Total
+car.mon.count.under.mod <- lm(car.mon.count.under ~ 1)
+dwtest(car.mon.count.under.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(car.mon.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.mon.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.mon.count.under, xlab="Total carnivore monthly count for underpasses",
+    main="Figure 13") #plot acf
+carnivores.monthly.under <- carnivores.monthly.under[order(carnivores.monthly.under$Month),] 
+plot(x=carnivores.monthly.under$Month, y=carnivores.monthly.under$Total,
+     xlab="Month",
+     ylab="Total carnivore monthly count for underpasses", type="l",
+     main="Figure 14")
+var(car.mon.count.under)
+mean(car.mon.count.under)
+```
+#Hourly carnivore count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+car.hou.count.jump<-carnivores.hourly.jump$Total
+car.hou.count.jump.mod <- lm(car.hou.count.jump ~ 1)
+dwtest(car.hou.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(car.hou.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.hou.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.hou.count.jump, xlab="Total carnivore hourly count for jumpouts",
+    main="Figure 15") #plot acf
+carnivores.hourly.jump <- carnivores.hourly.jump[order(carnivores.hourly.jump$HourEnding),] 
+plot(x=carnivores.hourly.jump$HourEnding, y=carnivores.hourly.jump$Total,
+     xlab="Hour",
+     ylab="Total carnivore hourly count for jumpouts", type="l",
+     main="Figure 16")
+var(car.hou.count.jump)
+mean(car.hou.count.jump)
+```
+
+#Hourly carnivore count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+car.hou.count.under<-carnivores.hourly.under$Total
+car.hou.count.under.mod <- lm(car.hou.count.under ~ 1)
+dwtest(car.hou.count.under.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(car.hou.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(car.hou.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(car.hou.count.under, xlab="Total carnivore hourly count for underpasses",
+    main="Figure 17") #plot acf
+carnivores.hourly.under <- carnivores.hourly.under[order(carnivores.hourly.under$HourEnding),] 
+plot(x=carnivores.hourly.under$HourEnding, y=carnivores.hourly.under$Total,
+     xlab="Hour",
+     ylab="Total carnivore hourly count for underpasses", type="l",
+     main="Figure 18")
+var(car.hou.count.under)
+mean(car.hou.count.under)
+```
+
+#Annual ungulate count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+ung.ann.count.jump<-ungulates.annual.jump$Total
+ung.ann.count.jump.mod <- lm(ung.ann.count.jump ~ 1)
+dwtest(ung.ann.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.ann.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.ann.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.ann.count.jump, xlab="Total ungulates annual count for jumpouts",
+    main="Figure 19") #plot acf
+ungulates.annual.jump <- ungulates.annual.jump[order(ungulates.annual.jump$Year),] 
+plot(x=ungulates.annual.jump$Year, y=ungulates.annual.jump$Total,
+     xlab="Year",
+     ylab="Total ungulates annual count for jumpouts", type="l",
+     main="Figure 20")
+var(ung.ann.count.jump)
+mean(ung.ann.count.jump)
+```
+
+#Annual ungulate count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+ung.ann.count.under<-ungulates.annual.under$Total
+ung.ann.count.under.mod <- lm(ung.ann.count.under ~ 1)
+dwtest(ung.ann.count.under.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.ann.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.ann.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.ann.count.under, xlab="Total ungulates annual count for underpasses",
+    main="Figure 21") #plot acf
+ungulates.annual.under <- ungulates.annual.under[order(ungulates.annual.under$Year),] 
+plot(x=ungulates.annual.under$Year, y=ungulates.annual.under$Total,
+     xlab="Year",
+     ylab="Total ungulates annual count for underpasses", type="l",
+     main="Figure 22")
+var(ung.ann.count.under)
+mean(ung.ann.count.under)
+```
+
+#Monthly ungulate count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+ung.mon.count.jump<-ungulates.monthly.jump$Total
+ung.mon.count.jump.mod <- lm(ung.mon.count.jump ~ 1)
+dwtest(ung.mon.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.mon.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.mon.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.mon.count.jump, xlab="Total ungulates monthly count for jumpouts",
+    main="Figure 23") #plot acf
+ungulates.monthly.jump <- ungulates.monthly.jump[order(ungulates.monthly.jump$Month),] 
+plot(x=ungulates.monthly.jump$Month, y=ungulates.monthly.jump$Total,
+     xlab="Month",
+     ylab="Total ungulates monthly count for jumpouts", type="l",
+     main="Figure 24")
+var(ung.mon.count.jump)
+mean(ung.mon.count.jump)
+```
+
+#Monthly ungulate count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+ung.mon.count.under<-ungulates.monthly.under$Total
+ung.mon.count.under.mod <- lm(ung.mon.count.under ~ 1)
+dwtest(ung.mon.count.under.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.mon.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.mon.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.mon.count.under, xlab="Total ungulates monthly count for underpasses",
+    main="Figure 25") #plot acf
+ungulates.monthly.under <- ungulates.monthly.under[order(ungulates.monthly.under$Month),] 
+plot(x=ungulates.monthly.under$Month, y=ungulates.monthly.under$Total,
+     xlab="Month",
+     ylab="Total ungulates monthly count for underpasses", type="l",
+     main="Figure 26")
+var(ung.mon.count.under)
+mean(ung.mon.count.under)
+```
+
+#Hourly ungulate count for jumpouts
+
+```{r, eval=TRUE, echo=FALSE}
+ung.hou.count.jump<-ungulates.hourly.jump$Total
+ung.hou.count.jump.mod <- lm(ung.hou.count.jump ~ 1)
+dwtest(ung.hou.count.jump.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.hou.count.jump, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.hou.count.jump, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.hou.count.jump, xlab="Total ungulates hourly count for jumpouts",
+    main="Figure 27") #plot acf
+ungulates.hourly.jump <- ungulates.hourly.jump[order(ungulates.hourly.jump$HourEnding),] 
+plot(x=ungulates.hourly.jump$HourEnding, y=ungulates.hourly.jump$Total,
+     xlab="Hour",
+     ylab="Total ungulates hourly count for jumpouts", type="l",
+     main="Figure 28")
+var(ung.hou.count.jump)
+mean(ung.hou.count.jump)
+```
+
+#Hourly ungulate count for underpasses
+
+```{r, eval=TRUE, echo=FALSE}
+ung.hou.count.under<-ungulates.hourly.under$Total
+ung.hou.count.under.mod <- lm(ung.hou.count.under ~ 1)
+dwtest(ung.hou.count.under.mod) #DW test (tests the residuals)-not autocorrelated
+Box.test(ung.hou.count.under, lag = 1, type = c("Box-Pierce"), fitdf = 0)
+Box.test(ung.hou.count.under, lag = 1, type = c("Ljung-Box"), fitdf = 0)
+acf(ung.hou.count.under, xlab="Total ungulates hourly count for underpasses",
+    main="Figure 29") #plot acf
+ungulates.hourly.under <- ungulates.hourly.under[order(ungulates.hourly.under$HourEnding),] 
+plot(x=ungulates.hourly.under$HourEnding, y=ungulates.hourly.under$Total,
+     xlab="Hour",
+     ylab="Total ungulates hourly count for underpasses", type="l",
+     main="Figure 30")
+var(ung.hou.count.under)
+mean(ung.hou.count.under)
+```
+
+#--------------------------------------------------------Violin plots------------------------------------------------------
+
+```{r, echo=FALSE}
+car.ann.count<-carnivores.annual$Total
+ung.ann.count<-ungulates.annual$Total
+car.mon.count<-carnivores.monthly$Total
+ung.mon.count<-ungulates.monthly$Total
+car.hou.count<-carnivores.hourly$Total
+ung.hou.count<-ungulates.hourly$Total
+```
+
+```{r, eval=TRUE, echo=FALSE}
+annual.counts<-cbind(car.ann.count,ung.ann.count)
+month.counts<-cbind(car.mon.count,ung.mon.count)
+#Make the hour counts the same length by adding NAs to carnivore vector
+n<-max(length(car.hou.count),length(ung.hou.count))
+length(car.hou.count)<-n
+hour.counts<-cbind(car.hou.count,ung.hou.count)
+
+vioplot(annual.counts, main="Figure 31")
+vioplot(month.counts, main="Figure 32")
+vioplot(hour.counts, main="Figure 33")
+```
+
+#--------------------------------------Look at whether there is circularity in the dataset---------------------------------
+
+```{r, echo=FALSE}
+#Setup the data differently, get frequencies of count for hour/month/year
+newdata<-read.csv("/Users/hannahedwards/Documents/Alberta Parks/Crossing-structures/data/newdata.csv")
+#Split by species and then crossing structure
+ungulates.under<-subset(newdata, newdata$Species.grouped == "Ungulates" &
+                                 newdata$Underpass.type == "Underpass")
+ungulates.jump<-subset(newdata, newdata$Species.grouped == "Ungulates" &
+                                 newdata$Underpass.type == "Jumpout")
+carnivores.under<-subset(newdata, newdata$Species.grouped == "Carnivores" &
+                                 newdata$Underpass.type == "Underpass")
+carnivores.jump<-subset(newdata, newdata$Species.grouped == "Carnivores" &
+                          newdata$Underpass.type == "Jumpout")
+carnivores<-subset(newdata, newdata$Species.grouped == "Carnivores")
+Bobcat<-subset(newdata, newdata$Species == "Bobcat")
+Cougar<-subset(newdata, newdata$Species == "Cougar")
+Coyote<-subset(newdata, newdata$Species == "Coyote")
+GrizzlyBear<-subset(newdata, newdata$Species == "Grizzly Bear")
+Lynx<-subset(newdata, newdata$Species == "Lynx")
+Marten<-subset(newdata, newdata$Species == "Marten")
+RedFox<-subset(newdata, newdata$Species == "Red Fox")
+StripedSkunk<-subset(newdata, newdata$Species == "Striped Skunk")
+UnknownBear<-subset(newdata, newdata$Species == "Unknown Bear")
+Wolf<-subset(newdata, newdata$Species == "Wolf")
+Wolverine<-subset(newdata, newdata$Species == "Wolverine")
+BlackBear<-subset(newdata, newdata$Species == "Black Bear")
+```
+
+#Ungulate and carnivore hours of activity
+
+```{r, eval=TRUE, echo=FALSE}
+#Make data circular with hourending
+#Vector
+unghour<-ungulates.under$HourEnding
+carhour<-carnivores.under$HourEnding
+unghourc <- circular(unghour, units="hours", template="clock24")
+carhourc <- circular(carhour, units="hours", template="clock24")
+#the radius of a segment is taken to be the square root of the relative frequency
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(unghourc)
+```
+```{r, eval=TRUE, echo=FALSE}
+a<-rose.diag(unghourc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Ungulate hour frequency", main="Figure 34")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(carhourc)
+```
+```{r, eval=TRUE, echo=FALSE}
+b<-rose.diag(carhourc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Carnivore hour frequency", main="Figure 35")
+```
+
+#Ungulate and carnivore months of activity
+
+```{r, eval=TRUE, echo=FALSE}
+#Make data circular with Month
+#Vector
+ungmon<-ungulates.under$Month
+carmon<-carnivores.under$Month
+ungmonc <- circular(ungmon, units="hours", template="clock12")
+carmonc <- circular(carmon, units="hours", template="clock12")
+#the radius of a segment is taken to be the square root of the relative frequency
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(ungmonc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(ungmonc, bins=12, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Ungulate month frequency", main="Figure 36")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(carmonc)
+```
+```{r, eval=TRUE, echo=FALSE}
+d<-rose.diag(carmonc, bins=12, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Carnivore month frequency", main="Figure 37")
+```
+
+#Carnivores hours of activity separated by species
+
+```{r, eval=TRUE, echo=FALSE}
+#Make data circular with hour for each carnivore species
+carnivores$Species<-as.factor(carnivores$Species)
+summary(carnivores$Species)
+
+#Bobcat
+Bobcathou<-Bobcat$HourEnding
+Bobcathouc <- circular(Bobcathou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Bobcathouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Bobcathouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Bobcat hour frequency", main="Figure 38")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Coyote
+Coyotehou<-Coyote$HourEnding
+Coyotehouc <- circular(Coyotehou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Coyotehouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Coyotehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Coyote hour frequency", main="Figure 39")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Cougar
+Cougarhou<-Cougar$HourEnding
+Cougarhouc <- circular(Cougarhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Cougarhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Cougarhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Cougar hour frequency", main="Figure 40")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Grizzly Bear
+GrizzlyBearhou<-GrizzlyBear$HourEnding
+GrizzlyBearhouc <- circular(GrizzlyBearhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(GrizzlyBearhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(GrizzlyBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Grizzly Bear hour frequency", main="Figure 41")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Lynx
+Lynxhou<-Lynx$HourEnding
+Lynxhouc <- circular(Lynxhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Lynxhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Lynxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Lynx hour frequency", main="Figure 42")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Marten
+Martenhou<-Marten$HourEnding
+Martenhouc <- circular(Martenhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Martenhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Martenhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Pine Marten hour frequency", main="Figure 43")
+```
+```{r, eval=TRUE, echo=FALSE}
+#RedFox
+RedFoxhou<-RedFox$HourEnding
+RedFoxhouc <- circular(RedFoxhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(RedFoxhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(RedFoxhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Red Fox hour frequency", main="Figure 44")
+```
+```{r, eval=TRUE, echo=FALSE}
+#StripedSkunk
+StripedSkunkhou<-StripedSkunk$HourEnding
+StripedSkunkhouc <- circular(StripedSkunkhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(StripedSkunkhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(StripedSkunkhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Striped Skunk hour frequency", main="Figure 45")
+```
+```{r, eval=TRUE, echo=FALSE}
+#UnknownBear
+UnknownBearhou<-UnknownBear$HourEnding
+UnknownBearhouc <- circular(UnknownBearhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(UnknownBearhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(UnknownBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Unknown Bear hour frequency", main="Figure 46")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Wolf
+Wolfhou<-Wolf$HourEnding
+Wolfhouc <- circular(Wolfhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Wolfhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Wolfhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolf hour frequency", main="Figure 47")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Wolverine
+Wolverinehou<-Wolverine$HourEnding
+Wolverinehouc <- circular(Wolverinehou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(Wolverinehouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(Wolverinehouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Wolverine hour frequency", main="Figure 48")
+```
+```{r, eval=TRUE, echo=FALSE}
+#Black bear
+BlackBearhou<-BlackBear$HourEnding
+BlackBearhouc <- circular(BlackBearhou, units="hours", template="clock24")
+```
+```{r, echo=FALSE, fig.show='hide'}
+plot(BlackBearhouc)
+```
+```{r, eval=TRUE, echo=FALSE}
+c<-rose.diag(BlackBearhouc, bins=24, col="darkgrey", cex=1.5, prop=1.3, add=FALSE,
+             xlab="Black Bear hour frequency", main="Figure 48")
+```
