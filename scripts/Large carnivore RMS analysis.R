@@ -39,7 +39,7 @@ prior<-list(R=list(V=1, nu=0.002),
 #Underpass
 
 contrasts(bigcarnivores.season.under$Season)
-bigcarnivores.season.under$Season <- relevel(bigcarnivores.season.under$Season, ref=4)
+bigcarnivores.season.under$Season <- relevel(bigcarnivores.season.under$Season, ref=3)
 contrasts(bigcarnivores.season.under$Season)
 
 #GLMM

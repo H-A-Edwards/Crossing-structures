@@ -1,40 +1,40 @@
-Year,Location,Underpass.type,annual.effort,Total
-2010,Stewart Creek,Jumpout,1,4
-2012,Stewart Creek,Jumpout,18,1
-2014,Stewart Creek,Jumpout,17,1
-2015,Stewart Creek,Jumpout,13,3
-2016,Stewart Creek,Jumpout,11,2
-2017,Stewart Creek,Jumpout,11,1
-2008,Stewart Creek,Underpass,5,37
-2009,Stewart Creek,Underpass,0,37
-2010,Stewart Creek,Underpass,1,23
-2011,Stewart Creek,Underpass,5,25
-2012,Stewart Creek,Underpass,19,25
-2013,Stewart Creek,Underpass,17,23
-2014,Stewart Creek,Underpass,15,23
-2015,Stewart Creek,Underpass,0,6
-2015,Stewart Creek,Underpass,13,36
-2016,Stewart Creek,Underpass,12,20
-2017,Stewart Creek,Underpass,12,19
-2018,Stewart Creek,Underpass,12,9
-2008,Wind Valley,Underpass,5,2
-2009,Wind Valley,Underpass,4,2
-2010,Wind Valley,Underpass,1,12
-2011,Wind Valley,Underpass,13,14
-2012,Wind Valley,Underpass,19,19
-2013,Wind Valley,Underpass,17,14
-2014,Wind Valley,Underpass,18,11
-2015,Wind Valley,Underpass,13,2
-2016,Wind Valley,Underpass,12,15
-2017,Wind Valley,Underpass,12,5
-2018,Wind Valley,Underpass,12,12
-2009,Dead Man's,Jumpout,0,1
-2011,Dead Man's,Jumpout,3,1
-2012,Dead Man's,Jumpout,18,1
-2014,Dead Man's,Jumpout,9,3
-2015,Dead Man's,Jumpout,13,2
-2016,Dead Man's,Jumpout,11,1
-2017,Dead Man's,Jumpout,11,2
-2017,Dead Man's,Jumpout,12,1
-2018,Dead Man's,Jumpout,11,2
-2018,Dead Man's,Jumpout,12,1
+Location,Year,Location,Underpass.type,annual.effort,Total
+Stewart South Jumpout,2010,Stewart Creek,Jumpout,1,4
+Stewart South Jumpout,2012,Stewart Creek,Jumpout,18,1
+Stewart South Jumpout,2014,Stewart Creek,Jumpout,17,1
+Stewart South Jumpout,2015,Stewart Creek,Jumpout,13,3
+Stewart South Jumpout,2016,Stewart Creek,Jumpout,11,2
+Stewart South Jumpout,2017,Stewart Creek,Jumpout,11,1
+Stewart Creek Underpass,2008,Stewart Creek,Underpass,5,36
+Stewart Creek Underpass,2009,Stewart Creek,Underpass,0,37
+Stewart Creek Underpass,2010,Stewart Creek,Underpass,1,23
+Stewart Creek Underpass,2011,Stewart Creek,Underpass,5,25
+Stewart Creek Underpass,2012,Stewart Creek,Underpass,19,25
+Stewart Creek Underpass,2013,Stewart Creek,Underpass,17,23
+Stewart Creek Underpass,2014,Stewart Creek,Underpass,15,23
+stewart Creek Underpass,2015,Stewart Creek,Underpass,0,6
+Stewart Creek Underpass,2015,Stewart Creek,Underpass,13,36
+Stewart Creek Underpass,2016,Stewart Creek,Underpass,12,20
+Stewart Creek Underpass,2017,Stewart Creek,Underpass,12,19
+Stewart Creek Underpass,2018,Stewart Creek,Underpass,12,9
+Wind Valley Underpass,2008,Wind Valley,Underpass,5,2
+Wind Valley Underpass,2009,Wind Valley,Underpass,4,2
+Wind Valley Underpass,2010,Wind Valley,Underpass,1,12
+Wind Valley Underpass,2011,Wind Valley,Underpass,13,14
+Wind Valley Underpass,2012,Wind Valley,Underpass,19,19
+Wind Valley Underpass,2013,Wind Valley,Underpass,17,14
+Wind Valley Underpass,2014,Wind Valley,Underpass,18,11
+Wind Valley Underpass,2015,Wind Valley,Underpass,13,2
+Wind Valley Underpass,2016,Wind Valley,Underpass,12,15
+Wind Valley Underpass,2017,Wind Valley,Underpass,12,5
+Wind Valley Underpass,2018,Wind Valley,Underpass,12,12
+Deadmans Northeast Jumpout,2009,Dead Man's,Jumpout,0,1
+Deadmans South Jumpout,2011,Dead Man's,Jumpout,3,1
+Deadmans Northwest Jumpout,2012,Dead Man's,Jumpout,18,1
+Deadmans Northeast Jumpout,2014,Dead Man's,Jumpout,9,3
+Deadmans Northeast Jumpout,2015,Dead Man's,Jumpout,13,2
+Deadmans Northeast Jumpout,2016,Dead Man's,Jumpout,11,1
+Deadmans Northeast Jumpout,2017,Dead Man's,Jumpout,11,2
+Deadmans South Jumpout,2017,Dead Man's,Jumpout,12,1
+Deadmans Northeast Jumpout,2018,Dead Man's,Jumpout,11,2
+Deadmans Northwest Jumpout,2018,Dead Man's,Jumpout,12,1

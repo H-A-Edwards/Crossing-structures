@@ -70,7 +70,7 @@ smallcarnivores.season.jump$Location<-as.factor(smallcarnivores.season.jump$Loca
 smallcarnivores.season.jump$Season<-as.factor(smallcarnivores.season.jump$Season)
 
 contrasts(smallcarnivores.season.jump$Season)
-smallcarnivores.season.jump$Season <- relevel(smallcarnivores.season.jump$Season, ref=3)
+smallcarnivores.season.jump$Season <- relevel(smallcarnivores.season.jump$Season, ref=4)
 contrasts(smallcarnivores.season.jump$Season)
 
 #GLMM
