@@ -36,7 +36,7 @@ contrasts(Collision$Mitigationstatus)
 #----------------------Run model---------------------
 model<-MCMCglmm(Collisioncount~Mitigationstatus+Guild+Threshold,
                 random=~Year,
-                prior=prior1, nitt=503000, burnin=40000, thin=250,
+                prior=prior, nitt=503000, burnin=40000, thin=250,
                 verbose=TRUE, 
                 family="poisson", 
                 data=Collision)
